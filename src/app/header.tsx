@@ -11,7 +11,7 @@ export async function Header() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g fill="none" stroke="#ffffff" strokeWidth="1.5">
+            <g fill="none"  className="dark:stroke-white stroke-black transition-colors duration-200" strokeWidth="2.25">
               <path strokeLinecap="round" d="M6 7v1m0 9v-5" />
               <path d="M11 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0Z" />
               <path

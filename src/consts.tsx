@@ -271,15 +271,7 @@ export const DATA = [
     og_title: "Solutions to encode, play and analyze video - Bitmovin",
     og_description:
       "Bitmovin empowers businesses to deliver video content to global audiences reliably, on more devices than ever before and in the highest quality possible.",
-  },
-  {
-    url: "https://lexingtonthemes.com",
-    og_image: "https://www.lexingtonthemes.com/images/OpenGraph/facebook.png",
-    og_title:
-      "Lexington Themes - Free and premium multipage themes & UI Kits For freelancers, developers, businesses, and personal use. Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise.",
-    og_description:
-      "Free and premium multipage themes & UI Kits For freelancers, developers, businesses, and personal use. Beautifully crafted with Astro.js, and Tailwind CSS — Simple & easy to customise..",
-  },
+  }, 
   {
     url: "https://hints.so",
     og_image:
@@ -409,15 +401,7 @@ export const DATA = [
     og_title: "Home - Litespace",
     og_description:
       "Litespace is the all-in-one platform to enhance team connection and alignment. Our mission is to accelerate engaging work environments and build inclusive cultures.",
-  },
-  {
-    url: "https://www.weekday.works",
-    og_image:
-      "https://dl.airtable.com/.attachments/3fedcde843dadd6b75b3e3b3a7539ca3/c43f2f0f/Screenshot2022-10-19at4_44_00AM.jpg",
-    og_title: "Weekday - Hire engineers vouched by other techies",
-    og_description:
-      "At Weekday, we help companies hire engineers who are vouched by other software engineers. We are enabling engineers to earn passive income by leveraging & monetizing the unused information in their head about the best people they have worked with.",
-  },
+  }, 
   {
     url: "https://federai.co",
     og_image: "https://federai.co/static/img/federai-thumbnail.png",
