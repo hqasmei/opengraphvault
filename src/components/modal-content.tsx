@@ -2,13 +2,21 @@
 
 import React, { useState } from 'react';
 
+
+
 import Link from 'next/link';
+
+
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { findOgImageById } from '@/lib/utils';
 import download from 'downloadjs';
 import { Download, ExternalLink } from 'lucide-react';
+
+
+
+
 
 export default function ModalContent({ id }: { id: string }) {
   const ogImageData = findOgImageById(id);
@@ -18,7 +26,7 @@ export default function ModalContent({ id }: { id: string }) {
     setIsDownloading(true);
 
     try {
-      const response = await fetch(ogImageData?.og_image || '');
+      const response = await fetch(ogImageData?.metadata.og_image || '');
       const blob = await response.blob();
 
       // Use downloadjs to trigger the download
