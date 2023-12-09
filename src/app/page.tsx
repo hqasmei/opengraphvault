@@ -20,7 +20,7 @@ export default async function Home({
             Open Graph Vault
           </span>
           <span className="text-center text-lg text-neutral-800 dark:text-neutral-300">
-            Where all your open graph images live
+            Where open graph images live
           </span>
         </div>
 

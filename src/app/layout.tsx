@@ -35,6 +35,22 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
+        {/* OG Tags */}
+        <meta property="og:image" content="https://opengraphvault.com/api/og" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:title" content="Open Graph Vault" />
+        <meta property="og:description" content="Where open graph images live." />
+
+        {/* Twitter Tags */}
+        <meta
+          name="twitter:image"
+          content="https://opengraphvault.com/api/og"
+        />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta property="twitter:title" content="Open Graph Vault" />
+        <meta property="twitter:description" content="Where open graph images live." />
       </head>
       <body className={GeistSans.className}>
         <main className="min-h-screen flex flex-col items-center">
