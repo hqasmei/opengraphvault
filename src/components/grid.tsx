@@ -25,55 +25,55 @@ export default function Grid({
 }: {
   searchParams: { [key: string]: string | null };
 }) {
-  const [data, setData] = useState<Item[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(1);
+  // const [data, setData] = useState<Item[]>([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [page, setPage] = useState(1);
 
-  useEffect(() => {
-    // Simulate initial data load
-    loadMoreData();
-  }, []); // Run this effect only once on component mount
+  // useEffect(() => {
+  //   // Simulate initial data load
+  //   loadMoreData();
+  // }, []); // Run this effect only once on component mount
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const { scrollTop, clientHeight, scrollHeight } =
-        document.documentElement;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const { scrollTop, clientHeight, scrollHeight } =
+  //       document.documentElement;
 
-      // Check if the user has scrolled to the bottom
-      if (scrollTop + clientHeight >= scrollHeight - 10 && !isLoading) {
-        // Load more data
-        loadMoreData();
-      }
-    };
+  //     // Check if the user has scrolled to the bottom
+  //     if (scrollTop + clientHeight >= scrollHeight - 10 && !isLoading) {
+  //       // Load more data
+  //       loadMoreData();
+  //     }
+  //   };
 
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
+  //   // Attach the scroll event listener
+  //   window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isLoading, page]);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [isLoading, page]);
 
-  const loadMoreData = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      const itemsPerPage = 15;
-      const startIndex = (page - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-      const moreData = DATA.slice(startIndex, endIndex); // Slice the array based on the current page
+  // const loadMoreData = () => {
+  //   setIsLoading(true);
+  //   setTimeout(() => {
+  //     const itemsPerPage = 15;
+  //     const startIndex = (page - 1) * itemsPerPage;
+  //     const endIndex = startIndex + itemsPerPage;
+  //     const moreData = DATA.slice(startIndex, endIndex); // Slice the array based on the current page
 
-      if (moreData.length > 0) {
-        setData((prevData) => [...prevData, ...moreData]);
-        setPage((prevPage) => prevPage + 1);
-      }
+  //     if (moreData.length > 0) {
+  //       setData((prevData) => [...prevData, ...moreData]);
+  //       setPage((prevPage) => prevPage + 1);
+  //     }
 
-      setIsLoading(false);
-    }, 2000); // Add a 2-second delay to simulate asynchronous data fetching
-  };
+  //     setIsLoading(false);
+  //   }, 2000); // Add a 2-second delay to simulate asynchronous data fetching
+  // };
   return (
     <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-24">
-      {data.map((item, idx) => {
+      {DATA.map((item, idx) => {
         return (
           <Link
             key={idx}
@@ -92,13 +92,13 @@ export default function Grid({
       })}
 
       {/* Adjust the height based on your loader size */}
-      {isLoading && (
+      {/* {isLoading && (
         <>
           <Skeleton className="h-36" />
           <Skeleton className="h-36" />
           <Skeleton className="h-36" />
         </>
-      )}
+      )} */}
 
       {!!searchParams.ogImageId && (
         <Modal>
