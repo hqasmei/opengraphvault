@@ -18,7 +18,7 @@ export default async function Home({
             Open Graph Vault
           </span>
           <span className="text-center text-lg text-neutral-800 dark:text-neutral-300">
-            A collection of <span>{DATA.length - 10}</span> open graph images
+            A collection of <span>{DATA.length - 10}</span> open graph images from
             across the internet.
           </span>
           <span className="text-center">
