@@ -8,11 +8,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { findOgImageById } from '@/lib/utils';
 import download from 'downloadjs';
-import { Download, ExternalLink } from 'lucide-react';
+import { Check, Download, ExternalLink, Share } from 'lucide-react';
 
 export default function ModalContent({ id }: { id: string }) {
   const ogImageData = findOgImageById(id);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [isUrlCopied, setIsUrlCopied] = useState(false);
 
   const handleDownload = async () => {
     setIsDownloading(true);
@@ -31,6 +32,24 @@ export default function ModalContent({ id }: { id: string }) {
     }
   };
 
+  const handleShare = async () => {
+    try {
+      // Copy the URL to the clipboard
+      await navigator.clipboard.writeText(ogImageData?.metadata.url || '');
+
+      // Update state to indicate that the URL has been copied
+      setIsUrlCopied(true);
+
+      // Reset the state after a brief period (e.g., 3 seconds)
+      setTimeout(() => {
+        setIsUrlCopied(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Error copying URL to clipboard:', error);
+      // Handle error, show a message to the user, etc.
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 gap-6 flex-col p-4">
       <div className="flex flex-col space-y-4">
@@ -41,15 +60,16 @@ export default function ModalContent({ id }: { id: string }) {
             alt={ogImageData?.metadata.og_title}
             loading="lazy"
           />
-          {/* <span>
-            {ogImageData?.tags.map((tag, idx) => {
-              return (
-                <Badge key={idx} className="text-xs" variant="secondary">
-                  {tag}
-                </Badge>
-              );
-            })}
-          </span> */}
+          <div className="flex flex-row space-x-1">
+            {ogImageData?.metadata.tags &&
+              ogImageData?.metadata.tags.map((tag, idx) => {
+                return (
+                  <Badge key={idx} className="" variant="secondary">
+                    {tag}
+                  </Badge>
+                );
+              })}
+          </div>
         </div>
 
         <div className="flex flex-col ">
@@ -71,6 +91,23 @@ export default function ModalContent({ id }: { id: string }) {
           >
             <span>Download</span>
             <Download size={14} />
+          </Button>
+          <Button
+            size="sm"
+            onClick={handleShare}
+            className="flex flex-row space-x-2"
+          >
+            {isUrlCopied ? (
+              <>
+                <span>Copied</span>
+                <Check size={14} />
+              </>
+            ) : (
+              <>
+                <span>Share</span>
+                <Share size={14} />
+              </>
+            )}
           </Button>
           <Button asChild size="sm" variant="outline">
             <Link

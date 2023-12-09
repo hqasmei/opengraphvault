@@ -17,6 +17,7 @@ type Item = {
     og_image: string;
     og_title: string;
     og_description: string;
+    tags: string[];
   };
 };
 
