@@ -1,17 +1,23 @@
-import { ModeToggle } from "./theme-toggle";
+import Link from 'next/link';
+
+import { ModeToggle } from './theme-toggle';
 
 export async function Header() {
   return (
     <div className="border-b py-4 w-full">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex flex-row items-center space-x-2">
+        <Link href="/" className="flex flex-row items-center space-x-2">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g fill="none"  className="dark:stroke-white stroke-black transition-colors duration-200" strokeWidth="2.25">
+            <g
+              fill="none"
+              className="dark:stroke-white stroke-black transition-colors duration-200"
+              strokeWidth="2.25"
+            >
               <path strokeLinecap="round" d="M6 7v1m0 9v-5" />
               <path d="M11 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0Z" />
               <path
@@ -25,7 +31,7 @@ export async function Header() {
             </g>
           </svg>
           <span className="font-semibold text-lg">Open Graph Vault</span>
-        </div>
+        </Link>
 
         <div className="flex justify-between gap-4">
           <ModeToggle />
