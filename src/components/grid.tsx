@@ -1,12 +1,14 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
 import Modal from '@/components/modal';
 import ModalContent from '@/components/modal-content';
+import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
+import { getAllUniqueTags } from '@/lib/utils';
 
 import { DATA } from '../consts';
 
@@ -26,6 +28,8 @@ export default function Grid({
 }: {
   searchParams: { [key: string]: string | null };
 }) {
+  const uniqueTags = getAllUniqueTags();
+  console.log(uniqueTags);
   // const [data, setData] = useState<Item[]>([]);
   // const [isLoading, setIsLoading] = useState(false);
   // const [page, setPage] = useState(1);
@@ -73,27 +77,35 @@ export default function Grid({
   //   }, 2000); // Add a 2-second delay to simulate asynchronous data fetching
   // };
   return (
-    <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-24">
-      {DATA.map((item, idx) => {
-        return (
-          <Link
-            key={idx}
-            href={`?ogImageId=${item.id}`}
-            scroll={false}
-            className="relative group w-full rounded-md border overflow-clip"
-          >
-            <img
-              className="w-full h-full object-cover object-top rounded-md cursor-pointer shadow-sm transition duration-300 hover:scale-105"
-              src={item.metadata.og_image}
-              alt={item.metadata.og_title}
-              loading="lazy"
-            />
-          </Link>
-        );
-      })}
+    <>
+      {/* <div className="flex flex-wrap gap-4">
+        {uniqueTags.map((tag, index) => (
+          <Badge key={index} variant="secondary">
+            {tag as ReactNode}
+          </Badge>
+        ))}
+      </div> */}
+      <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-24">
+        {DATA.map((item, idx) => {
+          return (
+            <Link
+              key={idx}
+              href={`?ogImageId=${item.id}`}
+              scroll={false}
+              className="relative group w-full rounded-md border overflow-clip"
+            >
+              <img
+                className="w-full h-full object-cover object-top rounded-md cursor-pointer shadow-sm transition duration-300 hover:scale-105"
+                src={item.metadata.og_image}
+                alt={item.metadata.og_title}
+                loading="lazy"
+              />
+            </Link>
+          );
+        })}
 
-      {/* Adjust the height based on your loader size */}
-      {/* {isLoading && (
+        {/* Adjust the height based on your loader size */}
+        {/* {isLoading && (
         <>
           <Skeleton className="h-36" />
           <Skeleton className="h-36" />
@@ -101,11 +113,12 @@ export default function Grid({
         </>
       )} */}
 
-      {!!searchParams.ogImageId && (
-        <Modal>
-          <ModalContent id={searchParams.ogImageId} />
-        </Modal>
-      )}
-    </div>
+        {!!searchParams.ogImageId && (
+          <Modal>
+            <ModalContent id={searchParams.ogImageId} />
+          </Modal>
+        )}
+      </div>
+    </>
   );
 }

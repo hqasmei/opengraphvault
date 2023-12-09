@@ -1,7 +1,10 @@
 import React from 'react';
 
-import Grid from '@/components/grid';
+import Link from 'next/link';
 
+import Grid from '@/components/grid';
+import { DATA } from '@/consts';
+ 
 export default async function Home({
   searchParams,
 }: {
@@ -15,7 +18,18 @@ export default async function Home({
             Open Graph Vault
           </span>
           <span className="text-center text-lg text-neutral-800 dark:text-neutral-300">
-            Where open graph images live
+            A collection of <span>{DATA.length - 10}</span> open graph images
+            across the internet.
+          </span>
+          <span className="text-center">
+            Made by{' '}
+            <Link
+              href="https://twitter.com/hqasmei"
+              className="underline"
+              target="_blank"
+            >
+              @hqasmei
+            </Link>
           </span>
         </div>
         <Grid searchParams={searchParams} />
