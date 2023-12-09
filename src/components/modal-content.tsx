@@ -37,11 +37,11 @@ export default function ModalContent({ id }: { id: string }) {
         <div className="flex flex-col space-y-2">
           <img
             className="w-full h-full object-cover   object-top rounded-md cursor-pointer shadow-sm"
-            src={ogImageData?.og_image}
-            alt={ogImageData?.og_title}
+            src={ogImageData?.metadata.og_image}
+            alt={ogImageData?.metadata.og_title}
             loading="lazy"
           />
-          <span>
+          {/* <span>
             {ogImageData?.tags.map((tag, idx) => {
               return (
                 <Badge key={idx} className="text-xs" variant="secondary">
@@ -49,18 +49,20 @@ export default function ModalContent({ id }: { id: string }) {
                 </Badge>
               );
             })}
-          </span>
+          </span> */}
         </div>
 
         <div className="flex flex-col ">
-          <span className="text-lg font-semibold">{ogImageData?.og_title}</span>
+          <span className="text-lg font-semibold">
+            {ogImageData?.metadata.og_title}
+          </span>
           <span className="text-sm font-thin">
-            {ogImageData?.og_description}
+            {ogImageData?.metadata.og_description}
           </span>
         </div>
       </div>
 
-      {ogImageData?.url && (
+      {ogImageData?.metadata.url && (
         <div className="flex flex-row justify-start space-x-4">
           <Button
             size="sm"
@@ -72,7 +74,7 @@ export default function ModalContent({ id }: { id: string }) {
           </Button>
           <Button asChild size="sm" variant="outline">
             <Link
-              href={ogImageData?.url}
+              href={ogImageData?.metadata.url}
               target="_blank"
               className="flex flex-row space-x-2"
             >
