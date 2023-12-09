@@ -40,7 +40,10 @@ export default function RootLayout({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="Open Graph Vault" />
-        <meta property="og:description" content="Where open graph images live." />
+        <meta
+          property="og:description"
+          content="Where open graph images live."
+        />
 
         {/* Twitter Tags */}
         <meta
@@ -50,7 +53,14 @@ export default function RootLayout({
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="630" />
         <meta property="twitter:title" content="Open Graph Vault" />
-        <meta property="twitter:description" content="Where open graph images live." />
+        <meta
+          property="twitter:description"
+          content="Where open graph images live."
+        />
+        <meta
+          property="twitter:card"
+          content="summary_large_image"
+        />
       </head>
       <body className={GeistSans.className}>
         <main className="min-h-screen flex flex-col items-center">
