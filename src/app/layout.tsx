@@ -38,8 +38,8 @@ export default function RootLayout({
         />
         {/* OG Tags */}
         <meta property="og:url" content="https://opengraphvault.com" />
-        <meta property="og:image" content="./opengraph-image.png" />
-        <meta property="og:image:type" content="png" />
+        <meta property="og:image" content="<generated>" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="Open Graph Vault" />
@@ -51,8 +51,8 @@ export default function RootLayout({
         {/* Twitter Tags */}
 
         <meta property="twitter:url" content="https://opengraphvault.com" />
-        <meta name="twitter:image" content="./twitter-image.png" />
-        <meta property="twitter:image:type" content="png" />
+        <meta name="twitter:image" content="<generated>" />
+        <meta property="twitter:image:type" content="image/png" />
         <meta property="twitter:image:width" content="1200" />
         <meta property="twitter:image:height" content="630" />
         <meta property="twitter:title" content="Open Graph Vault" />
