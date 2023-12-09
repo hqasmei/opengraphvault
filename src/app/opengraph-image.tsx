@@ -1,21 +1,21 @@
-import { ImageResponse } from "next/og";
-// App router includes @vercel/og.
-// No need to install it.
+import { ImageResponse } from 'next/og';
 
-export const runtime = "edge"; 
+// Route segment config
+export const runtime = 'edge';
 
-export async function GET() {
+// Image generation
+export default async function Image() {
   return new ImageResponse(
     (
       <div
         style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#000",
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#000',
           fontSize: 32,
           fontWeight: 600,
         }}
@@ -41,8 +41,8 @@ export async function GET() {
         </svg>
         <div
           style={{
-            marginLeft: "14px",
-            color: "#fff",
+            marginLeft: '14px',
+            color: '#fff',
           }}
         >
           Open Graph Vault
@@ -52,6 +52,6 @@ export async function GET() {
     {
       width: 1200,
       height: 630,
-    }
+    },
   );
 }

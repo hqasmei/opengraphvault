@@ -35,18 +35,6 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-
-        {/* OG Tags */}
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
-
-        {/* Twitter Tags */}
-        <meta name="twitter:image" content="<generated>" />
-        <meta name="twitter:image:type" content="<generated>" />
-        <meta name="twitter:image:width" content="<generated>" />
-        <meta name="twitter:image:height" content="<generated>" />
       </head>
       <body className={GeistSans.className}>
         <main className="min-h-screen flex flex-col items-center">
