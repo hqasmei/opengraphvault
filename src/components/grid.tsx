@@ -28,8 +28,7 @@ export default function Grid({
 }: {
   searchParams: { [key: string]: string | null };
 }) {
-  const uniqueTags = getAllUniqueTags();
-  console.log(uniqueTags);
+  const uniqueTags = getAllUniqueTags(); 
   // const [data, setData] = useState<Item[]>([]);
   // const [isLoading, setIsLoading] = useState(false);
   // const [page, setPage] = useState(1);
