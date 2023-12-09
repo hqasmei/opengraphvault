@@ -2,6 +2,7 @@ import '../styles/globals.css';
 
 import type { Metadata } from 'next';
 
+import { Analytics } from '@vercel/analytics/react';
 import { GeistSans } from 'geist/font';
 
 import { ContextProvider } from './context-provider';
@@ -37,7 +38,8 @@ export default function RootLayout({
         />
         {/* OG Tags */}
         <meta property="og:url" content="https://opengraphvault.com" />
-        <meta property="og:image" content="https://opengraphvault.com/api/og" />
+        <meta property="og:image" content="./opengraph-image.png" />
+        <meta property="og:image:type" content="png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="Open Graph Vault" />
@@ -47,11 +49,12 @@ export default function RootLayout({
         />
 
         {/* Twitter Tags */}
-        <meta
-          name="twitter:image"
-          content="https://opengraphvault.com/api/og"
-        />
+
         <meta property="twitter:url" content="https://opengraphvault.com" />
+        <meta name="twitter:image" content="./twitter-image.png" />
+        <meta property="twitter:image:type" content="png" />
+        <meta property="twitter:image:width" content="1200" />
+        <meta property="twitter:image:height" content="630" />
         <meta property="twitter:title" content="Open Graph Vault" />
         <meta
           property="twitter:description"
@@ -65,6 +68,7 @@ export default function RootLayout({
             <ContextProvider>
               <Header />
               {children}
+              <Analytics />
             </ContextProvider>
           </div>
         </main>
