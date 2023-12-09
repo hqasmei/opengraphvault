@@ -2,21 +2,13 @@
 
 import React, { useState } from 'react';
 
-
-
 import Link from 'next/link';
-
-
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { findOgImageById } from '@/lib/utils';
 import download from 'downloadjs';
 import { Download, ExternalLink } from 'lucide-react';
-
-
-
-
 
 export default function ModalContent({ id }: { id: string }) {
   const ogImageData = findOgImageById(id);
