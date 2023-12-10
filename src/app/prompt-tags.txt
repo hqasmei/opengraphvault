@@ -1,0 +1,5 @@
+can you help me add tags to these items
+can you look at the url and title, determine if it is a framework, a saas or whatever key words in the description.
+what I mean by tags, add the tags as an array of strings ni the meta data
+all lower case make it between 1-3 tags, include if it's a tool, a saas, a framework
+all in one array of dictionaries

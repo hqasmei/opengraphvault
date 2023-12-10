@@ -12,6 +12,9 @@ import { Header } from './header';
 export const metadata: Metadata = {
   title: 'Open Graph Vault',
   description: 'All open graph images related',
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({
@@ -37,32 +40,6 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        <meta
-          property="og:image"
-          content="https://opengraphvault.com/opengraph-image.png/"
-        />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:title" content="Open Graph Vault"></meta>
-        <meta
-          property="og:description"
-          content="A collection of 178 open graph images from across the internet."
-        />
-        <meta property="og:url" content="https://opengraphvault.com"></meta>
-        <meta
-          name="twitter:image"
-          content="https://opengraphvault.com/twitter-image.png/"
-        />
-        <meta name="twitter:image:type" content="image/png" />
-        <meta name="twitter:image:width" content="1200" />
-        <meta name="twitter:image:height" content="630" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Open Graph Vault"></meta>
-        <meta
-          property="twitter:description"
-          content="A collection of 178 open graph images from across the internet."
-        ></meta>
       </head>
       <body className={GeistSans.className}>
         <main className="min-h-screen flex flex-col items-center">
