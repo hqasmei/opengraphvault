@@ -84,7 +84,7 @@ export default function Grid({
           </Badge>
         ))}
       </div> */}
-      <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-24">
+      <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-24">
         {DATA.map((item, idx) => {
           return (
             <Link

@@ -10,10 +10,14 @@ import { ContextProvider } from './context-provider';
 import { Header } from './header';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://opengraphvault.com/'),
   title: 'Open Graph Vault',
   description: 'All open graph images related',
   twitter: {
     card: 'summary_large_image',
+  },
+  openGraph: {
+    images: '/opengraph-image.png',
   },
 };
 
