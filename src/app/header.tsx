@@ -33,8 +33,11 @@ export async function Header() {
           <span className="font-semibold text-lg">Open Graph Vault</span>
         </Link>
 
-        <div className="flex justify-between gap-4 items-center">
+        <div className="flex justify-between gap-8 items-center">
           {/* <Link href="/submit">Submit</Link> */}
+          <Link href="https://plausible.io/opengraphvault.com/" target="_blank">
+            Analytics
+          </Link>
           <ModeToggle />
         </div>
       </div>
