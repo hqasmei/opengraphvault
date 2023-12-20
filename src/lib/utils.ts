@@ -1,3 +1,5 @@
+import { ReadonlyURLSearchParams } from 'next/navigation';
+
 import { DATA } from '@/consts';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -22,3 +24,13 @@ export function getAllUniqueTags() {
 
   return Array.from(uniqueTags);
 }
+
+export const createUrl = (
+  pathname: string,
+  params: URLSearchParams | ReadonlyURLSearchParams,
+) => {
+  const paramsString = params.toString();
+  const queryString = `${paramsString.length ? '?' : ''}${paramsString}`;
+
+  return `${pathname}${queryString}`;
+};

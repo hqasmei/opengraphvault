@@ -3,14 +3,16 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Modal from '@/components/modal';
 import ModalContent from '@/components/modal-content';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
-import { getAllUniqueTags } from '@/lib/utils';
+import { createUrl, getAllUniqueTags } from '@/lib/utils';
 
 import { DATA } from '../consts';
+import { Button } from './ui/button';
 
 type Item = {
   id: string;
@@ -20,6 +22,7 @@ type Item = {
     og_title: string;
     og_description: string;
     tags: string[];
+    filters: { name: string; value: string }[];
   };
 };
 
@@ -28,64 +31,40 @@ export default function Grid({
 }: {
   searchParams: { [key: string]: string | null };
 }) {
-  const uniqueTags = getAllUniqueTags(); 
-  // const [data, setData] = useState<Item[]>([]);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [page, setPage] = useState(1);
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   // Simulate initial data load
-  //   loadMoreData();
-  // }, []); // Run this effect only once on component mount
+  const handleModeChange = (mode: string) => {
+    router.replace(`?mode=${mode}`, undefined);
+  };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const { scrollTop, clientHeight, scrollHeight } =
-  //       document.documentElement;
+  const filteredData = searchParams.mode
+    ? DATA.filter((item) => {
+        const modeFilter =
+          item.metadata.filters &&
+          item.metadata.filters.find(
+            (filter) =>
+              filter.name === 'mode' && filter.value === searchParams.mode,
+          );
+        return modeFilter ? true : false;
+      })
+    : DATA;
 
-  //     // Check if the user has scrolled to the bottom
-  //     if (scrollTop + clientHeight >= scrollHeight - 10 && !isLoading) {
-  //       // Load more data
-  //       loadMoreData();
-  //     }
-  //   };
-
-  //   // Attach the scroll event listener
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Cleanup the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [isLoading, page]);
-
-  // const loadMoreData = () => {
-  //   setIsLoading(true);
-  //   setTimeout(() => {
-  //     const itemsPerPage = 15;
-  //     const startIndex = (page - 1) * itemsPerPage;
-  //     const endIndex = startIndex + itemsPerPage;
-  //     const moreData = DATA.slice(startIndex, endIndex); // Slice the array based on the current page
-
-  //     if (moreData.length > 0) {
-  //       setData((prevData) => [...prevData, ...moreData]);
-  //       setPage((prevPage) => prevPage + 1);
-  //     }
-
-  //     setIsLoading(false);
-  //   }, 2000); // Add a 2-second delay to simulate asynchronous data fetching
-  // };
   return (
     <>
-      {/* <div className="flex flex-wrap gap-4">
-        {uniqueTags.map((tag, index) => (
-          <Badge key={index} variant="secondary">
-            {tag as ReactNode}
-          </Badge>
-        ))}
-      </div> */}
+      <div className="flex flex-col space-y-2">
+        <span>Theme</span>
+        <div className="space-x-2">
+          <Button variant="secondary" onClick={() => handleModeChange('dark')}>
+            Dark
+          </Button>
+          <Button variant="secondary" onClick={() => handleModeChange('light')}>
+            Light
+          </Button>
+        </div>
+      </div>
       <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-24">
-        {DATA.map((item, idx) => {
+        {filteredData.map((item, idx) => {
           return (
             <Link
               key={idx}
@@ -102,15 +81,6 @@ export default function Grid({
             </Link>
           );
         })}
-
-        {/* Adjust the height based on your loader size */}
-        {/* {isLoading && (
-        <>
-          <Skeleton className="h-36" />
-          <Skeleton className="h-36" />
-          <Skeleton className="h-36" />
-        </>
-      )} */}
 
         {!!searchParams.ogImageId && (
           <Modal>
