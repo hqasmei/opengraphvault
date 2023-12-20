@@ -44,6 +44,11 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
+        <script
+          defer
+          data-domain="opengraphvault.com"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </head>
       <body className={GeistSans.className}>
         <main className="min-h-screen flex flex-col items-center">
