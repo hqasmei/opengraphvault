@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -29,9 +29,12 @@ export default function Grid() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const theme = searchParams.get('theme');
-
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState(searchParams.get('theme'));
+  const [primaryColor, setPrimaryColor] = useState(
+    searchParams.get('primaryColor'),
+  );
+  const [secondaryColors, setSecondaryColors] = useState<string[]>([]);
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -45,6 +48,21 @@ export default function Grid() {
 
   const handleThemeChange = (value: string) => {
     router.push(pathname + `?` + createQueryString('theme', value));
+    setTheme(value);
+  };
+
+  const handlePrimaryColorChange = (value: string) => {
+    router.push(pathname + `?` + createQueryString('primaryColor', value));
+    setPrimaryColor(value);
+  };
+
+  const handlSecondaryColorsChange = (values: string[]) => {
+    const queryParams = values.map(
+      (color) => `secondaryColors=${encodeURIComponent(color)}`,
+    );
+    const queryString = queryParams.join('&');
+    router.push(pathname + `?` + queryString);
+    setSecondaryColors(values);
   };
 
   const showDrawer = () => {
@@ -56,20 +74,43 @@ export default function Grid() {
   };
 
   const filteredData = DATA.filter((item) => {
-    // If the theme is 'all', include all items
-    if (theme === 'all' || !theme) {
-      return true;
-    }
+    // If the theme is 'all' or undefined, include all items
+    const themeFilter =
+      !theme ||
+      theme === 'all' ||
+      (item.metadata.filters &&
+        item.metadata.filters.some(
+          (filter) => filter.name === 'theme' && filter.value === theme,
+        ));
 
-    // Check if any filter in the item's filters array has 'mode' equal to the selected theme
-    return (
-      item.metadata.filters &&
-      item.metadata.filters.some(
-        (filter) => filter.name === 'theme' && filter.value === theme,
-      )
-    );
+    // If the primaryColor is 'all' or undefined, include all items
+    const primaryColorFilter =
+      !primaryColor ||
+      primaryColor === 'all' ||
+      (item.metadata.filters &&
+        item.metadata.filters.some(
+          (filter) =>
+            filter.name === 'primaryColor' && filter.value === primaryColor,
+        ));
+
+    const secondaryColorsFilter =
+      !secondaryColors ||
+      secondaryColors.length === 0 ||
+      (item.metadata.filters &&
+        item.metadata.filters.some((filter) => {
+          if (filter.name === 'secondaryColors') {
+            const filterValue = filter.value as string[];
+            return Array.isArray(filterValue)
+              ? filterValue.some((color) =>
+                  secondaryColors.includes(color as string),
+                )
+              : secondaryColors.includes(filterValue as string);
+          }
+          return false;
+        }));
+
+    return themeFilter && primaryColorFilter && secondaryColorsFilter;
   });
-
   return (
     <div className=" flex flex-col space-y-2 md:flex-row space-x-4 items-start">
       <aside className="hidden md:flex flex-col space-y-2 px-10">
@@ -87,6 +128,50 @@ export default function Grid() {
                     { value: 'all', label: 'All' },
                     { value: 'light', label: 'Light' },
                     { value: 'dark', label: 'Dark' },
+                  ]}
+                />
+              </Space>,
+            )}
+          </div>
+          <div className="flex flex-col space-y-1">
+            <span className="font-medium text-sm">Primary color</span>
+            {withTheme(
+              <Space wrap>
+                <Select
+                  style={{ width: 160 }}
+                  onChange={(value) => handlePrimaryColorChange(value)}
+                  placeholder="Primary color"
+                  defaultValue={primaryColor === null ? 'all' : primaryColor}
+                  options={[
+                    { value: 'all', label: 'All' },
+                    ...(getUniqueValues('primaryColor') as string[]).map(
+                      (color) => ({
+                        value: color,
+                        label: capitalizeFirstLetter(color),
+                      }),
+                    ),
+                  ]}
+                />
+              </Space>,
+            )}
+          </div>
+          <div className="flex flex-col space-y-1">
+            <span className="font-medium text-sm">Secondary colors</span>
+            {withTheme(
+              <Space direction="vertical">
+                <Select
+                  mode="multiple"
+                  allowClear
+                  style={{ width: 160, height: '100%' }}
+                  placeholder="Secondary colors"
+                  onChange={(values) => handlSecondaryColorsChange(values)}
+                  options={[
+                    ...(getUniqueValues('secondaryColors') as string[]).map(
+                      (color) => ({
+                        value: color,
+                        label: capitalizeFirstLetter(color),
+                      }),
+                    ),
                   ]}
                 />
               </Space>,
@@ -121,22 +206,74 @@ export default function Grid() {
               </Space>
             }
           >
-            <div className="flex flex-col space-y-1">
-              <span className="font-medium text-sm text-black">Themes</span>
-              {withTheme(
-                <Space wrap>
-                  <Select
-                    style={{ width: 160 }}
-                    defaultValue={theme === null ? 'all' : theme}
-                    onChange={(value) => handleThemeChange(value)}
-                    options={[
-                      { value: 'all', label: 'All' },
-                      { value: 'light', label: 'Light' },
-                      { value: 'dark', label: 'Dark' },
-                    ]}
-                  />
-                </Space>,
-              )}
+            <div className='flex flex-col space-y-4'>
+              <div className="flex flex-col space-y-1">
+                <span className="font-medium text-sm text-black">Themes</span>
+                {withTheme(
+                  <Space wrap>
+                    <Select
+                      style={{ width: 160 }}
+                      defaultValue={theme === null ? 'all' : theme}
+                      onChange={(value) => handleThemeChange(value)}
+                      options={[
+                        { value: 'all', label: 'All' },
+                        { value: 'light', label: 'Light' },
+                        { value: 'dark', label: 'Dark' },
+                      ]}
+                    />
+                  </Space>,
+                )}
+              </div>
+              <div className="flex flex-col space-y-1">
+                <span className="font-medium text-sm text-black">
+                  Primary color
+                </span>
+                {withTheme(
+                  <Space wrap>
+                    <Select
+                      style={{ width: 160 }}
+                      onChange={(value) => handlePrimaryColorChange(value)}
+                      placeholder="Primary color"
+                      defaultValue={
+                        primaryColor === null ? 'all' : primaryColor
+                      }
+                      options={[
+                        { value: 'all', label: 'All' },
+                        ...(getUniqueValues('primaryColor') as string[]).map(
+                          (color) => ({
+                            value: color,
+                            label: capitalizeFirstLetter(color),
+                          }),
+                        ),
+                      ]}
+                    />
+                  </Space>,
+                )}
+              </div>
+              <div className="flex flex-col space-y-1">
+                <span className="font-medium text-sm text-black">
+                  Secondary colors
+                </span>
+                {withTheme(
+                  <Space direction="vertical">
+                    <Select
+                      mode="multiple"
+                      allowClear
+                      style={{ width: 160, height: '100%' }}
+                      placeholder="Secondary colors"
+                      onChange={(values) => handlSecondaryColorsChange(values)}
+                      options={[
+                        ...(getUniqueValues('secondaryColors') as string[]).map(
+                          (color) => ({
+                            value: color,
+                            label: capitalizeFirstLetter(color),
+                          }),
+                        ),
+                      ]}
+                    />
+                  </Space>,
+                )}
+              </div>
             </div>
           </Drawer>
         </>
