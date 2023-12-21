@@ -42,7 +42,7 @@ export const DATA = [
       og_title: 'AuthKit by WorkOS',
       og_description:
         'A fully-featured UI component system for building authentication flows into your app.',
-      tags: ['ui component', 'tool', 'saas'],
+      tags: [, 'tool', 'saas'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'blue' },
@@ -78,7 +78,7 @@ export const DATA = [
         'FlowMapp UX planning platform. Visual Sitemaps, User Flows and Wireframes design tools',
       og_description:
         'FlowMapp is an innovative platform to plan, control and optimize the development of websites. It combines a visual sitemap planning tool, user flow tool, wireframing tool and content gathering system in one solution to build complex information architecture for websites, mobile apps and products.',
-      tags: ['planning', 'design', 'platform'],
+      tags: [, 'design', 'platform'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'blue' },
@@ -129,7 +129,7 @@ export const DATA = [
       og_title: 'Cardinal - Your AI product backlog',
       og_description:
         'Cardinal is an opinionated feature backlog. It pulls in your customer feedback, CRM data, and task management issues and uses AI to assess which customers want which features, how important is it for them, and tie them to your product strategy.',
-      tags: ['ai', 'product backlog', 'tool'],
+      tags: ['ai', 'tool'],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'gradient' },
@@ -145,7 +145,7 @@ export const DATA = [
         'https://framerusercontent.com/images/iPM1TJbssh9XNLiyaGcLvAC4acs.png',
       og_title: 'Ozone - Create Videos Faster with AI.',
       og_description: 'Meet Ozone, your video creation co-pilot.',
-      tags: ['video creation', 'ai', 'tool'],
+      tags: ['ai', 'tool'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'blue' },
@@ -162,7 +162,7 @@ export const DATA = [
       og_title: 'Payment Processing Tools & Resources for Startups | Stripe',
       og_description:
         'Millions of businesses are powered by Stripe. Get payment solutions designed to help startups launch quickly, scale further, and find new revenue streams.',
-      tags: ['payment processing', 'startup', 'resource'],
+      tags: ['payment processing', 'startup'],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'white' },
@@ -179,7 +179,7 @@ export const DATA = [
       og_title: 'Droplette',
       og_description:
         'Enhance your designs in Figma with Droplette. Create smart, AI-driven color palettes effortlessly. Your creativity, amplified.',
-      tags: ['design', 'figma', 'ai'],
+      tags: ['design', 'ai'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'black' },
@@ -196,7 +196,7 @@ export const DATA = [
       og_title: 'Plain — Support for developers',
       og_description:
         'Meet the support platform that works the way you work with your customers. Incredibly fast, integrated with Linear and Slack, and a powerful API for everything else.',
-      tags: ['support', 'platform', 'developer'],
+      tags: ['support', 'platform'],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'white' },
@@ -212,7 +212,7 @@ export const DATA = [
       og_title: 'Retool | The fastest way to develop effective software.',
       og_description:
         "Retool is the fastest way to build effective business software. Use Retool's building blocks to develop apps and workflow automations that connect to your databases and APIs, instantly.",
-      tags: ['software development', 'workflow', 'tool'],
+      tags: [, 'workflow', 'tool'],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'white' },
@@ -1122,7 +1122,7 @@ export const DATA = [
       og_title: 'Middesk | Leading Business Identity Platform',
       og_description:
         'Middesk is the Business Identity Platform that helps companies verify and underwrite their customers, automate KYB, register for payroll taxes, and ensure compliance â via a dashboard or API.',
-      tags: ['saas', 'business identity', 'KYB automation'],
+      tags: ['saas', 'business identity'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'green' },
@@ -1664,7 +1664,7 @@ export const DATA = [
         'Coherence â The Integrated Developer Platform for your own cloud account',
       og_description:
         'The Integrated Developer Platform. A developer experience multiplier for your AWS or GCP account. Automated on-demand and ephemeral preview environments, production deployments, and managed CI/CD pipelines.',
-      tags: ['saas', 'developer platform', 'cloud'],
+      tags: ['saas', 'cloud'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'purple' },
@@ -2618,7 +2618,7 @@ export const DATA = [
         'Stytch â The most powerful identity platform built for developers',
       og_description:
         "Secure and scale your product with Stytch's identity platform. From authentication to fraud protection, we have the APIs and SDKs for your use case.",
-      tags: ['saas', 'identity', 'developer'],
+      tags: ['saas', 'identity'],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'white' },
@@ -2737,7 +2737,7 @@ export const DATA = [
       og_title: 'AtomusÂ® â Design System for Figma',
       og_description:
         'Design system built for efficiency and scaling. Atomus is a design system for Figma. Set your typography style guides, color palettes and buttons. Input fields, different states and many more to speed up your delivery process. Indispensable tool for professional digital design studios.',
-      tags: ['tool', 'design', 'figma'],
+      tags: ['tool', 'design'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'black' },
@@ -2876,7 +2876,10 @@ export const DATA = [
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'green' },
-        { name: 'secondaryColors', value: ['white','purple','pink','black'] },
+        {
+          name: 'secondaryColors',
+          value: ['white', 'purple', 'pink', 'black'],
+        },
       ],
     },
   },
@@ -2924,11 +2927,14 @@ export const DATA = [
         'Skills-based Hiring. Qualify Talent with Skills Tests | Toggl Hire',
       og_description:
         'Screen candidates faster, find qualified talent, and hire with confidence. Our Skills Assessment library covers 180+ roles and 200+ technical and soft skills.',
-      tags: ['saas', 'recruitment', 'skillsassessment'],
+      tags: ['saas', ,],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'purple' },
-        { name: 'secondaryColors', value: ['white','pink','orange','purple'] },
+        {
+          name: 'secondaryColors',
+          value: ['white', 'pink', 'orange', 'purple'],
+        },
       ],
     },
   },
@@ -2941,7 +2947,7 @@ export const DATA = [
       og_title: 'Business Gifting Solutions | &Open',
       og_description:
         '&Open is redefining business gifting by curating relationships from better gifting experiences. With solutions for employees, customers & more, learn more.',
-      tags: ['saas', 'gifting', 'relationshipmanagement'],
+      tags: ['saas', ,],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'white' },
@@ -2958,11 +2964,11 @@ export const DATA = [
       og_title: 'Save up to 30% on your SaaS stack with Spendflo.',
       og_description:
         'Let Spendflo buy and renew your SaaS for you. Get more visibility on your vendors, automate procurement and spend less on every tool.',
-      tags: ['saas', 'procurement', 'saving'],
+      tags: ['saas', ,],
       filters: [
         { name: 'theme', value: 'light' },
         { name: 'primaryColor', value: 'white' },
-        { name: 'secondaryColors', value: ['black','pink'] },
+        { name: 'secondaryColors', value: ['black', 'pink'] },
       ],
     },
   },
@@ -2975,11 +2981,11 @@ export const DATA = [
       og_title: 'Appraisd | Dedicated Performance Management Platform',
       og_description:
         'Appraisd helps HR teams and managers align talent performance management with company goals and growth.',
-      tags: ['saas', 'HR', 'performancemanagement'],
+      tags: ['saas', 'HR'],
       filters: [
         { name: 'theme', value: 'dark' },
         { name: 'primaryColor', value: 'red' },
-        { name: 'secondaryColors', value: ['white','red'] },
+        { name: 'secondaryColors', value: ['white', 'red'] },
       ],
     },
   },

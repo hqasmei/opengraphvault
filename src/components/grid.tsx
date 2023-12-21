@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
@@ -17,10 +18,8 @@ import {
   getUniqueValues,
 } from '@/lib/utils';
 import withTheme from '@/theme';
-import { Drawer, Radio, Select, Space } from 'antd';
-import type { DrawerProps } from 'antd/es/drawer';
-import type { RadioChangeEvent } from 'antd/es/radio';
-import { ListFilter } from 'lucide-react';
+import { Drawer, Select, Space } from 'antd';
+import { ListFilter, SearchX } from 'lucide-react';
 
 import { DATA } from '../consts';
 
@@ -35,6 +34,9 @@ export default function Grid() {
     searchParams.get('primaryColor'),
   );
   const [secondaryColors, setSecondaryColors] = useState<string[]>([]);
+  // const tags = getAllUniqueTags();
+
+  // console.log(tags);
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -111,75 +113,73 @@ export default function Grid() {
 
     return themeFilter && primaryColorFilter && secondaryColorsFilter;
   });
+
   return (
-    <div className=" flex flex-col space-y-2 md:flex-row space-x-4 items-start">
-      <aside className="hidden md:flex flex-col space-y-2 px-10">
-        <span className="text-lg font-bold">Filters</span>
-        <div className="flex flex-col space-y-4 items-start justify-start ">
-          <div className="flex flex-col space-y-1">
-            <span className="font-medium text-sm">Themes</span>
-            {withTheme(
-              <Space wrap>
-                <Select
-                  style={{ width: 160 }}
-                  defaultValue={theme === null ? 'all' : theme}
-                  onChange={(value) => handleThemeChange(value)}
-                  options={[
-                    { value: 'all', label: 'All' },
-                    { value: 'light', label: 'Light' },
-                    { value: 'dark', label: 'Dark' },
-                  ]}
-                />
-              </Space>,
-            )}
-          </div>
-          <div className="flex flex-col space-y-1">
-            <span className="font-medium text-sm">Primary color</span>
-            {withTheme(
-              <Space wrap>
-                <Select
-                  style={{ width: 160 }}
-                  onChange={(value) => handlePrimaryColorChange(value)}
-                  placeholder="Primary color"
-                  defaultValue={primaryColor === null ? 'all' : primaryColor}
-                  options={[
-                    { value: 'all', label: 'All' },
-                    ...(getUniqueValues('primaryColor') as string[]).map(
-                      (color) => ({
-                        value: color,
-                        label: capitalizeFirstLetter(color),
-                      }),
-                    ),
-                  ]}
-                />
-              </Space>,
-            )}
-          </div>
-          <div className="flex flex-col space-y-1">
-            <span className="font-medium text-sm">Secondary colors</span>
-            {withTheme(
-              <Space direction="vertical">
-                <Select
-                  mode="multiple"
-                  allowClear
-                  style={{ width: 160, height: '100%' }}
-                  placeholder="Secondary colors"
-                  onChange={(values) => handlSecondaryColorsChange(values)}
-                  options={[
-                    ...(getUniqueValues('secondaryColors') as string[]).map(
-                      (color) => ({
-                        value: color,
-                        label: capitalizeFirstLetter(color),
-                      }),
-                    ),
-                  ]}
-                />
-              </Space>,
-            )}
-          </div>
+    <div className=" flex  flex-col space-y-4 md:space-y-6 items-start">
+      <div className="hidden md:flex flex-row space-x-4">
+        <div className="flex flex-col space-y-1">
+          <span className="font-medium text-sm">Themes</span>
+          {withTheme(
+            <Space wrap>
+              <Select
+                style={{ width: 160 }}
+                defaultValue={theme === null ? 'all' : theme}
+                onChange={(value) => handleThemeChange(value)}
+                options={[
+                  { value: 'all', label: 'All' },
+                  { value: 'light', label: 'Light' },
+                  { value: 'dark', label: 'Dark' },
+                ]}
+              />
+            </Space>,
+          )}
         </div>
-      </aside>
-      <div className="flex w-full justify-start md:hidden">
+        <div className="flex flex-col space-y-1">
+          <span className="font-medium text-sm  ">Primary color</span>
+          {withTheme(
+            <Space wrap>
+              <Select
+                style={{ width: 160 }}
+                onChange={(value) => handlePrimaryColorChange(value)}
+                placeholder="Primary color"
+                defaultValue={primaryColor === null ? 'all' : primaryColor}
+                options={[
+                  { value: 'all', label: 'All' },
+                  ...(getUniqueValues('primaryColor') as string[]).map(
+                    (color) => ({
+                      value: color,
+                      label: capitalizeFirstLetter(color),
+                    }),
+                  ),
+                ]}
+              />
+            </Space>,
+          )}
+        </div>
+        <div className="flex flex-col space-y-1">
+          <span className="font-medium text-sm ">Secondary colors</span>
+          {withTheme(
+            <Space direction="horizontal">
+              <Select
+                mode="multiple"
+                allowClear
+                style={{ width: 250, height: '100%' }}
+                placeholder="Secondary colors"
+                onChange={(values) => handlSecondaryColorsChange(values)}
+                options={[
+                  ...(getUniqueValues('secondaryColors') as string[]).map(
+                    (color) => ({
+                      value: color,
+                      label: capitalizeFirstLetter(color),
+                    }),
+                  ),
+                ]}
+              />
+            </Space>,
+          )}
+        </div>
+      </div>
+      <div className="flex w-full justify-start  md:hidden">
         <>
           <Space>
             <Button
@@ -193,7 +193,7 @@ export default function Grid() {
           </Space>
           <Drawer
             title="Filters"
-            placement="left"
+            placement="right"
             width={500}
             onClose={onClose}
             open={open}
@@ -206,7 +206,7 @@ export default function Grid() {
               </Space>
             }
           >
-            <div className='flex flex-col space-y-4'>
+            <div className="flex flex-col space-y-4">
               <div className="flex flex-col space-y-1">
                 <span className="font-medium text-sm text-black">Themes</span>
                 {withTheme(
@@ -279,6 +279,17 @@ export default function Grid() {
         </>
       </div>
 
+      {filteredData.length === 0 && (
+        <div className="w-full items-center justify-center flex-1 flex py-20 flex-col space-y-4">
+          <SearchX size={100} />
+          <div className="flex flex-col space-y-2 items-center justify-center">
+            <span className="text-neutral-400">No matching items found</span>
+            <span className="font-semibold">
+              Try changing your search criteria
+            </span>
+          </div>
+        </div>
+      )}
       <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-24">
         {filteredData.map((item, idx) => {
           return (
