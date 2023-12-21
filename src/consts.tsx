@@ -9,7 +9,11 @@ export const DATA = [
       og_description:
         'Slater is a modern coding environment with an inbuilt AI tool. Get custom code quickly with no character limits. Sign up today!',
       tags: ['ai', 'tool', 'saas'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: 'white' },
+        { name: 'secondaryColors', value: ['green', 'blue'] },
+      ],
     },
   },
   {
@@ -22,7 +26,11 @@ export const DATA = [
       og_description:
         'Framer is where teams design and publish stunning sites.',
       tags: ['design', 'framework'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'black' },
+        { name: 'secondaryColors', value: ['blue', 'red', 'purple'] },
+      ],
     },
   },
 
@@ -35,7 +43,11 @@ export const DATA = [
       og_description:
         'A fully-featured UI component system for building authentication flows into your app.',
       tags: ['ui component', 'tool', 'saas'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'blue' },
+        { name: 'secondaryColors', value: ['blue'] },
+      ],
     },
   },
   {
@@ -46,7 +58,14 @@ export const DATA = [
       og_title: 'Steep: the new way to work with data together',
       og_description: 'The modern analytics platform powered by metrics.',
       tags: ['analytics', 'platform'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'black' },
+        {
+          name: 'secondaryColors',
+          value: ['blue', 'purple', 'green', 'orange'],
+        },
+      ],
     },
   },
   {
@@ -60,7 +79,11 @@ export const DATA = [
       og_description:
         'FlowMapp is an innovative platform to plan, control and optimize the development of websites. It combines a visual sitemap planning tool, user flow tool, wireframing tool and content gathering system in one solution to build complex information architecture for websites, mobile apps and products.',
       tags: ['planning', 'design', 'platform'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'blue' },
+        { name: 'secondaryColors', value: ['green', 'white'] },
+      ],
     },
   },
   {
@@ -73,7 +96,11 @@ export const DATA = [
       og_description:
         'AngelList builds the infrastructure that powers the startup economy—providing investors and innovators with the tools to grow.',
       tags: ['startup', 'infrastructure'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'blue' },
+        { name: 'secondaryColors', value: ['blue'] },
+      ],
     },
   },
   {
@@ -86,7 +113,11 @@ export const DATA = [
       og_description:
         'GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, review code like a pro, track bugs and fea...',
       tags: ['development', 'platform'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'black' },
+        { name: 'secondaryColors', value: ['blue', 'purple'] },
+      ],
     },
   },
   {
@@ -99,7 +130,11 @@ export const DATA = [
       og_description:
         'Cardinal is an opinionated feature backlog. It pulls in your customer feedback, CRM data, and task management issues and uses AI to assess which customers want which features, how important is it for them, and tie them to your product strategy.',
       tags: ['ai', 'product backlog', 'tool'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: 'gradient' },
+        { name: 'secondaryColors', value: ['white'] },
+      ],
     },
   },
   {
@@ -111,7 +146,11 @@ export const DATA = [
       og_title: 'Ozone - Create Videos Faster with AI.',
       og_description: 'Meet Ozone, your video creation co-pilot.',
       tags: ['video creation', 'ai', 'tool'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: 'blue' },
+        { name: 'secondaryColors', value: ['black'] },
+      ],
     },
   },
   {
@@ -124,7 +163,11 @@ export const DATA = [
       og_description:
         'Millions of businesses are powered by Stripe. Get payment solutions designed to help startups launch quickly, scale further, and find new revenue streams.',
       tags: ['payment processing', 'startup', 'resource'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
 
@@ -137,7 +180,11 @@ export const DATA = [
       og_description:
         'Enhance your designs in Figma with Droplette. Create smart, AI-driven color palettes effortlessly. Your creativity, amplified.',
       tags: ['design', 'figma', 'ai'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -150,7 +197,11 @@ export const DATA = [
       og_description:
         'Meet the support platform that works the way you work with your customers. Incredibly fast, integrated with Linear and Slack, and a powerful API for everything else.',
       tags: ['support', 'platform', 'developer'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -162,7 +213,11 @@ export const DATA = [
       og_description:
         "Retool is the fastest way to build effective business software. Use Retool's building blocks to develop apps and workflow automations that connect to your databases and APIs, instantly.",
       tags: ['software development', 'workflow', 'tool'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -174,7 +229,11 @@ export const DATA = [
       og_description:
         'Clay is a beautiful and private rolodex for iPhone, Mac, and web, built automatically to help you be more thoughtful with the contacts and people in your professional network and personal life.',
       tags: ['network', 'rolodex', 'tool'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -187,7 +246,11 @@ export const DATA = [
       og_description:
         'Discover the stories behind top-notch design work. \nJoin over 11,5k others and subscribe to Off-Grid today.',
       tags: ['design', 'stories', 'platform'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -201,7 +264,11 @@ export const DATA = [
       og_description:
         "Vercel's Frontend Cloud gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized Web.",
       tags: ['frontend', 'cloud', 'framework'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -213,7 +280,11 @@ export const DATA = [
       og_description:
         'GSAP is an industry standard JavaScript animation library from GreenSock that lets you craft high-performance animations that work in every major browser.',
       tags: ['javascript animation', 'library'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -226,7 +297,11 @@ export const DATA = [
       og_description:
         'Webinar software for the modern marketer. Drive more pipeline. Convert more revenue. And 10x the value of your webinars with AI generated content.',
       tags: ['webinar', 'software', 'ai'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -238,7 +313,11 @@ export const DATA = [
       og_description:
         'A simple “bio link” for your socials. Designed for mobile, but packed with features for a complete website',
       tags: ['social', 'mobile', 'website'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -251,7 +330,11 @@ export const DATA = [
       og_description:
         'Acuity Scheduling is customizable appointment scheduling software made easy, automating your workflows, payments, and bookings. Start a free trial today!',
       tags: ['appointment scheduling', 'software', 'scheduling'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
 
@@ -264,7 +347,11 @@ export const DATA = [
       og_description:
         'PostHog is the all-in-one platform for building better products - with product analytics, feature flags, session recordings, a/b testing, heatmaps, and more.',
       tags: ['analytics', 'feature flags', 'recordings'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -277,7 +364,11 @@ export const DATA = [
       og_description:
         'Pelago’s virtual clinic for substance use management offers personalized treatment for people looking to overcome tobacco, alcohol, and opioid use — helping businesses reduce healthcare costs.',
       tags: ['virtual clinic', 'substance use', 'healthcare'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -289,7 +380,11 @@ export const DATA = [
       og_description:
         "Trusted by 30 million people and teams. Todoist is the world's favorite task manager and to-do list app. Finally become focused, organized and calm.",
       tags: ['task manager', 'to-do list', 'organization'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -302,7 +397,11 @@ export const DATA = [
       og_description:
         'Create custom, responsive websites with the power of code — visually. Design and build your site with a flexible CMS and top-tier hosting. Try Webflow for free.',
       tags: ['website builder', 'visual', 'web design'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -315,7 +414,11 @@ export const DATA = [
       og_description:
         'Miro is a visual workspace for innovation where teams manage projects, design products, and build the future together. Join 60M+ users from around the world.',
       tags: ['visual workspace', 'innovation', 'collaboration'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -328,7 +431,11 @@ export const DATA = [
       og_description:
         'Kaizen Labs helps city administrators transform resident experiences with simple digital products like websites, resident permitting, and recreation management.',
       tags: ['city administration', 'resident experiences', 'digital products'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -341,7 +448,11 @@ export const DATA = [
       og_description:
         'Use Rig.dev’s platform and modules to build applications in Kubernetes without the complexity.',
       tags: ['application platform', 'kubernetes', 'deployment'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -353,7 +464,11 @@ export const DATA = [
       og_description:
         'Unlock superior Git workflows with Gitness. Experience seamless code reviews, robust CI/CD solutions, and up to 4x faster pipeline execution. Begin your journey in just 30 seconds.',
       tags: ['open source', 'code hosting', 'ci/cd'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -366,7 +481,11 @@ export const DATA = [
       og_description:
         'Fable is how creative teams make motion together. Design, collaborate, and scale – all under one roof. Get started for free.',
       tags: ['motion design', 'collaboration', 'creative teams'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -380,7 +499,11 @@ export const DATA = [
       og_description:
         'Osome helps foreign and Singaporean entrepreneurs to manage their businesses. Register and get your new company operational with our certified agents backed by modern technology.',
       tags: ['incorporation', 'accounting', 'business management'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
 
@@ -393,7 +516,11 @@ export const DATA = [
       og_title: 'Shape',
       og_description: 'Explore your data with AI',
       tags: ['data exploration', 'AI'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -406,7 +533,11 @@ export const DATA = [
       og_description:
         'The self-serve support platform built for modern teams and products. Support your customers at scale with intelligent documentation and customer forums.',
       tags: ['self-serve support', 'SaaS', 'customer forums'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -418,7 +549,11 @@ export const DATA = [
       og_description:
         'Accept crypto and fiat payments effortlessly. Experience instant settlements, send payouts, and efficiently manage your payments using a unified dashboard and programmable API.',
       tags: ['payments', 'web3', 'crypto'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -431,7 +566,11 @@ export const DATA = [
       og_description:
         'Baseflow is the first platform that streamlines Citizenship by Investment programs and Golden Visas. Discover the fast track to your freedom. Baseflow today to a country that actually wants you.',
       tags: ['citizenship', 'investment', 'Golden Visas'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -444,7 +583,11 @@ export const DATA = [
       og_description:
         'Artboard Studio is a graphic and motion design tool with automation features and an extensive content library to create one design into thousands easily.',
       tags: ['visual content', 'design tool', 'automation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -457,7 +600,11 @@ export const DATA = [
       og_description:
         'Cash management, investing, and retirement planning. Outsmart taxes with Smart Cash—it automatically moves your money to your highest after-tax rate on Titan.',
       tags: ['cash management', 'investing', 'retirement planning'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -469,7 +616,11 @@ export const DATA = [
       og_description:
         'observIQ brings clarity and control to your existing observability data chaos. BindPlane observability pipelines reduce cost, simplify collection, and transform your telemetry data while sending to the right destinations.',
       tags: ['observability', 'telemetry data', 'pipelines'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -482,7 +633,11 @@ export const DATA = [
       og_description:
         'Work anytime, anywhere with Asana. Keep remote and distributed teams, and your entire organization, focused on their goals, projects, and tasks with Asana.',
       tags: ['team management', 'projects', 'tasks'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -495,7 +650,11 @@ export const DATA = [
       og_description:
         'AngelList Relay extracts key details from investment documents and company updates. Transforming unstructured data from your inbox into an organized dashboard by simply forwarding an email.',
       tags: ['investment', 'documents', 'dashboard'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -507,7 +666,11 @@ export const DATA = [
       og_description:
         'The native HubSpot prospecting solution. Identify your top target accounts, understand who is ready to buy, then instantly find their contact information.',
       tags: ['sales intelligence', 'HubSpot', 'prospecting'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -520,7 +683,11 @@ export const DATA = [
       og_description:
         'Businesses use Mercu to hire, train, and engage with their frontline workforce, all via the chat apps their employees already use.',
       tags: ['communication platform', 'frontline workforce', 'chat apps'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -533,7 +700,11 @@ export const DATA = [
       og_description:
         'Work with our expert YouTube strategists, writers, editors, and producers to create content that transforms your channel. Starting at $5,000/mo.',
       tags: ['YouTube growth', 'video editing', 'thumbnail design'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -547,7 +718,11 @@ export const DATA = [
       og_description:
         'BlockWallet is where speed, reliability, security and privacy meet. Try the self-custodial Web3 wallet where your only concern will be the market itself!',
       tags: ['crypto wallet', 'Web3', 'blockchain'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -561,7 +736,11 @@ export const DATA = [
       og_description:
         'Small business hiring software with beautifully designed job posts, customizable application forms and an intuitive, user-friendly ATS. Start for free!',
       tags: ['hiring tool', 'small businesses', 'job posts'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -574,7 +753,11 @@ export const DATA = [
       og_description:
         'Smart investing products and personalized advice to build long-term wealth. Low-fee managed investing, commission-free trading, and high-interest chequing and savings.',
       tags: ['investing', 'wealth management', 'financial advice'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -587,7 +770,11 @@ export const DATA = [
       og_description:
         'Embed payments into your product or platform with Rainforest’s configurable, low-code components. Accept and send payments, minimize risk and compliance headaches, and grow revenue.',
       tags: ['payments processing', 'software companies', 'risk management'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -600,7 +787,11 @@ export const DATA = [
       og_description:
         'Bolt powers frictionless experiences for retailers and customers at every step of the shopping journey—from login to checkout.',
       tags: ['shopping', 'retailers', 'customer experience'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -613,7 +804,11 @@ export const DATA = [
       og_description:
         'Proven Platform helps VC firms to make vendor selection easy for portfolio companies.',
       tags: ['saas', 'venture capital', 'vendor selection'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -626,7 +821,11 @@ export const DATA = [
       og_description:
         'Cycle unifies customer feedback and user research into a single platform that lets you extract insights with no hassle, powered by AI.',
       tags: ['saas', 'product feedback', 'user research'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -638,7 +837,11 @@ export const DATA = [
       og_description:
         'Hire international talent in minutes. Remote is the most disrupt…',
       tags: ['saas', 'global HR', 'employment tools'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -650,7 +853,11 @@ export const DATA = [
       og_description:
         'Create invoices, track expenses and get complete financial reports of your business powered by Notion.',
       tags: ['saas', 'startup finances', 'notion integration'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -663,7 +870,11 @@ export const DATA = [
       og_description:
         'Effortlessly collect subscription revenue and offer exclusive access to your locked content on Framer, all by leveraging Lemonsqueezy license keys',
       tags: ['framework', 'member-only content', 'subscription revenue'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -676,7 +887,11 @@ export const DATA = [
       og_description:
         'Workflow automation for everyone. Zapier automates your work across 6,000+ app integrations, so you can focus on what matters.',
       tags: ['saas', 'workflow automation', 'app integrations'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -689,7 +904,11 @@ export const DATA = [
       og_description:
         'Business and invoicing management solution used by 500,000+ small businesses globally. Get peace of mind & focus on your work.',
       tags: ['saas', 'business management', 'invoicing'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -702,7 +921,11 @@ export const DATA = [
       og_description:
         "Transform your messaging, video, and agent workspace and give customers the support they deserve with Acquire's unified customer service software.",
       tags: ['saas', 'customer support', 'unified service software'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -715,7 +938,11 @@ export const DATA = [
       og_description:
         'Join thousands of forward-thinking businesses using Ramp to control spend, save time, and automate busywork.',
       tags: ['saas', 'finance operations', 'expense control'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -727,7 +954,11 @@ export const DATA = [
       og_title: 'Readymag',
       og_description: 'The design tool for outstanding websites',
       tags: ['tool', 'design tool', 'websites'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -739,7 +970,11 @@ export const DATA = [
       og_description:
         'Glide makes it easy to build and deploy powerful custom apps powered by AI with no code. Create your first app by trying Glide for free.',
       tags: ['saas', 'no-code app builder', 'AI-powered apps'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -752,7 +987,11 @@ export const DATA = [
       og_description:
         'Expand your design skillset and increase your earning potential through live workshops, a-sync lessons, and connect with like-minded individuals.',
       tags: ['tool', 'design skillset', 'live workshops'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -765,7 +1004,11 @@ export const DATA = [
       og_description:
         'Secfi is the leading provider of equity planning, stock option financing, secondaries and wealth management for startup employees.',
       tags: ['saas', 'financial advisor', 'equity planning'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -778,7 +1021,11 @@ export const DATA = [
       og_description:
         'Sammy offers global professionals a way to get paid faster form the United States, save their money in dollars and spend with an international Mastercard',
       tags: ['saas', 'financial freedom', 'global payments'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -791,7 +1038,11 @@ export const DATA = [
       og_description:
         'Figma is the leading collaborative design tool for building meaningful products. Seamlessly design, prototype, develop, and collect feedback in a single platform.',
       tags: ['tool', 'collaborative design', 'interface design'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -804,7 +1055,11 @@ export const DATA = [
       og_description:
         'Generate and edit vector art, icons, 3d images and illustrations in a wide range of styles suitable for websites, print and marketing',
       tags: ['tool', 'AI artboard', 'vector art'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -816,7 +1071,11 @@ export const DATA = [
       og_description:
         'Grabee is a customer feedback management tool which helps you collect, manage and prioritize customer feedback from different sources and platforms.',
       tags: ['saas', 'customer feedback', 'feedback management'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -828,7 +1087,11 @@ export const DATA = [
       og_description:
         'Imagifly is a platform designed to simplify the AI image generation process. It provides a well-organized system of customizable keywords, enabling effortless and rapid creation of unique prompts for AI tools such as Midjourney, Dall-E, or Photoshop.',
       tags: ['saas', 'AI image generation', 'prompt creation'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -840,7 +1103,11 @@ export const DATA = [
       og_title: 'Focal â Manage, proof and deliver ads 10x faster',
       og_description: 'The central hub for your creative assets and campaigns.',
       tags: ['saas', 'ad management', 'creative assets'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -853,7 +1120,11 @@ export const DATA = [
       og_description:
         'Middesk is the Business Identity Platform that helps companies verify and underwrite their customers, automate KYB, register for payroll taxes, and ensure compliance â via a dashboard or API.',
       tags: ['saas', 'business identity', 'KYB automation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -864,7 +1135,11 @@ export const DATA = [
       og_title: 'Family',
       og_description: 'Your favorite crypto wallet.',
       tags: ['crypto wallet', 'finance'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -877,7 +1152,11 @@ export const DATA = [
       og_description:
         'Buy directly from producers, in groups. Unbeatable prices for consumers, better earnings for producers. We call it the magic of the deal â¨',
       tags: ['saas', 'group buying', 'consumer-producer platform'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -890,7 +1169,11 @@ export const DATA = [
       og_description:
         'Easily create shareable dashboards that make key business data, metrics and KPIs clear and easy-to-understand.',
       tags: ['saas', 'dashboard', 'KPIs'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -903,7 +1186,11 @@ export const DATA = [
       og_description:
         "Unleash your creativity with Diagram's AI-powered design tools.",
       tags: ['tool', 'design', 'AI-powered'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -915,7 +1202,11 @@ export const DATA = [
       og_title: 'House of Pitch',
       og_description: 'Smooth, confident outreach to an interested audience',
       tags: ['saas', 'pitch', 'audience outreach'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -928,7 +1219,11 @@ export const DATA = [
       og_description:
         'Enhance your design system by creating your own source of truth, improve collaboration between design and development and reduce manual work.',
       tags: ['saas', 'design system', 'design tokens'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -940,7 +1235,11 @@ export const DATA = [
       og_description:
         "Welcome to Feedly — the platform where businesses and curious minds stay ahead of the curve! We're passionate about helping teams track competitors, discover new trends, and research emerging security threats. Feedly AI is a collection of machine learning models that automatically collect, analyze, and help you share actionable insights from millions of sources in real-time.",
       tags: ['saas', 'AI', 'news tracking'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -953,7 +1252,11 @@ export const DATA = [
       og_description:
         'Otter matches parents who need care with trusted sitters in their community, on-demand.',
       tags: ['saas', 'kidcare', 'parenting'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -965,7 +1268,11 @@ export const DATA = [
       og_description:
         'Query, analyze, and report on live data from your own data sources and 25+ popular SaaS tools, including Snowflake, PostgreSQL, Stripe, and more. Free 14-day trial.',
       tags: ['saas', 'spreadsheet', 'data analysis'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -978,7 +1285,11 @@ export const DATA = [
       og_description:
         'Helping the world learn from its data with event analytics everyone can use. Letâs build.',
       tags: ['saas', 'analytics', 'product analytics'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -991,7 +1302,11 @@ export const DATA = [
       og_description:
         'A web design tool for the intelligence age. STUDIO AI can understand what you are designing, learn from your feedback to take your designs further, and turn them instantly into live websites. This is web design, redesigned.',
       tags: ['tool', 'design', 'web design'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1004,7 +1319,11 @@ export const DATA = [
       og_description:
         'Create a beautiful personal page to show your audience everything you are and create - in one link.',
       tags: ['saas', 'link in bio', 'personal page'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1016,7 +1335,11 @@ export const DATA = [
       og_description:
         "Literal is the best platform to collectively explore the ideas of the world's greatest authors.",
       tags: ['saas', 'literature', 'authors'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1029,7 +1352,11 @@ export const DATA = [
       og_description:
         'Everything freelancers, contractors and solo professionals need to work with businesses and collect payment.',
       tags: ['saas', 'freelancers', 'payment'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1041,7 +1368,11 @@ export const DATA = [
       og_description:
         'Secure. Open Source. Community Driven. Simply the best Algorand wallet.',
       tags: ['saas', 'wallet', 'Algorand'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1055,7 +1386,11 @@ export const DATA = [
       og_description:
         'Synthesized is the first all-in-one data automation platform for data-driven organizations. Learn more about our DataOps platform and synthetic data generation.',
       tags: ['saas', 'data automation', 'DataOps'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1068,7 +1403,11 @@ export const DATA = [
       og_description:
         "Add contacts, find qualified emails & synchronize LinkedIn & Sales Navigator conversations to the CRM through Surfe's simple chrome extension.",
       tags: ['saas', 'CRM integration', 'LinkedIn'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1081,7 +1420,11 @@ export const DATA = [
       og_description:
         'The power of AI is coming to the 3rd dimension. Generate 3d objects, animations, and textures using prompts. Design faster and watch your ideas come to life with the help of AI.',
       tags: ['tool', '3D design', 'AI-powered'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1094,7 +1437,11 @@ export const DATA = [
       og_description:
         'A visual collaborative whiteboard where teams can diagram, brainstorm, and organize ideas together.',
       tags: ['saas', 'collaboration', 'whiteboard'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1107,7 +1454,11 @@ export const DATA = [
       og_description:
         'The flexible Customer Insights Hub for teams and businesses that get you from data to insights fast, no matter the research method.',
       tags: ['saas', 'customer insights', 'research'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1120,7 +1471,11 @@ export const DATA = [
       og_description:
         "Growth can be a great problem to have - as long as you have the right team. We're the right-size partner who'll prove that our culture isn't an empty promise.",
       tags: ['saas', 'outsourcing', 'growth'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1132,7 +1487,11 @@ export const DATA = [
       og_description:
         'The complete suite to manage projects, collaborate in real-time, share files, create proposals, get paid and automate your workflow - all from one app.',
       tags: ['saas', 'project management', 'workflow automation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1145,7 +1504,11 @@ export const DATA = [
       og_description:
         'Twingate makes Zero Trust Network Access easy to deploy, even easier to use, and always secure.',
       tags: ['saas', 'security', 'network access'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1158,7 +1521,11 @@ export const DATA = [
       og_description:
         'The simple and efficient way to pay your growing team. Clear pricing, great support, a ton of automation.',
       tags: ['saas', 'payroll', 'automation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1171,7 +1538,11 @@ export const DATA = [
       og_description:
         'Postcards is a free email template builder with a no-code editor, allowing for quick email newsletter creation. Design, develop, and collaborate all on one platform.',
       tags: ['tool', 'email marketing', 'no-code'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1184,7 +1555,11 @@ export const DATA = [
       og_description:
         'Scale customer love ð, grow customer revenue ð¸, and save your team countless hours ð. All with Slack.',
       tags: ['saas', 'customer support', 'Slack integration'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1197,7 +1572,11 @@ export const DATA = [
       og_description:
         'Generate website copy quickly and easily using AI, all without leaving Figma.',
       tags: ['tool', 'copywriting', 'AI-powered'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1211,7 +1590,11 @@ export const DATA = [
       og_description:
         'uConnect is the first ever all-in-one virtual career center, enabling the modern career services professional to simplify virtual engagement.',
       tags: ['saas', 'career services', 'virtual engagement'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1225,7 +1608,11 @@ export const DATA = [
       og_description:
         'The all-in-one employment superapp for easier work, rewarding careers, faster pay, and everyday savings. Join now and unlock game-changing rewards!',
       tags: ['saas', 'work app', 'career'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1238,7 +1625,11 @@ export const DATA = [
       og_description:
         'Growing icon library with 5,000+ icons / 6 styles for Figma &Â IconJar. Easily change the corner radius or stroke weight of any icon in seconds. Without Adobe.',
       tags: ['tool', 'design', 'icons'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1251,7 +1642,11 @@ export const DATA = [
       og_description:
         'Winden is a business bank designed to help you make more money. Earn unlimited rewards, free wire transfers, and more.',
       tags: ['saas', 'business banking', 'entrepreneurs'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1264,7 +1659,11 @@ export const DATA = [
       og_description:
         'The Integrated Developer Platform. A developer experience multiplier for your AWS or GCP account. Automated on-demand and ephemeral preview environments, production deployments, and managed CI/CD pipelines.',
       tags: ['saas', 'developer platform', 'cloud'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1277,7 +1676,11 @@ export const DATA = [
       og_description:
         '160+ countries, 40 currencies, one account. Save when you send, spend and manage your money internationally.',
       tags: ['finance', 'international', 'money management'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1290,7 +1693,11 @@ export const DATA = [
       og_description:
         'data.to.design makes it easy to generate and access the content you need, so you can design faster than ever.',
       tags: ['tool', 'content generation', 'design'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1303,7 +1710,11 @@ export const DATA = [
       og_description:
         'AI cover letter generator, ATS resume keyword optimizer, resume design templates, and more. Powered by GPT.',
       tags: ['saas', 'AI', 'resume optimization'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1315,7 +1726,11 @@ export const DATA = [
       og_description:
         "A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.",
       tags: ['saas', 'workspace', 'productivity'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1328,7 +1743,11 @@ export const DATA = [
       og_description:
         'Create professional animated content with Jitter. Use it to design on-brand animated UIs, videos, social media posts, websites, apps, logos and more. Sign up for free.',
       tags: ['tool', 'motion design', 'animation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1339,7 +1758,11 @@ export const DATA = [
       og_title: 'Chronicle',
       og_description: 'The modern format of storytelling',
       tags: ['platform', 'storytelling', 'content creation'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1352,7 +1775,11 @@ export const DATA = [
       og_description:
         'Open Source Scheduling: Send a link and meet or build an entire marketplace for humans to connect',
       tags: ['saas', 'scheduling', 'open source'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1364,7 +1791,11 @@ export const DATA = [
       og_description:
         'The Typescript API framework that enhances developer productivity',
       tags: ['tool', 'typescript', 'API framework'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1376,7 +1807,11 @@ export const DATA = [
       og_description:
         'Work with your team on open-source and private repositories, all in one place.',
       tags: ['development', 'github', 'collaboration'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1388,7 +1823,11 @@ export const DATA = [
       og_description:
         'Liveblocks provides developers with a complete toolkit to embed performant collaboration features to your product in days, not months.',
       tags: ['saas', 'development', 'collaboration'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1401,7 +1840,11 @@ export const DATA = [
       og_description:
         'Skiff Mail privacy-first, end-to-end encrypted product home, with Mail, Calendar, Pages, and Drive overview.',
       tags: ['saas', 'privacy', 'email'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1413,7 +1856,11 @@ export const DATA = [
       og_title: 'Genius by Diagram',
       og_description: 'Your AI design companion',
       tags: ['tool', 'AI', 'design'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1425,7 +1872,11 @@ export const DATA = [
       og_description:
         'The AI-based omnichannel shared inbox for customer support over Voice, Email, Live Chat, SMS, and WhatsApp.',
       tags: ['saas', 'customer support', 'AI'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1437,7 +1888,11 @@ export const DATA = [
       og_description:
         "Find out what's bringing you the most search traffic with amazing features like automated keyword tagging, keyword recommendation, and smart traffic estimation tools. Try it out for 14 days with Wope - no commitment necessary!",
       tags: ['saas', 'SEO', 'rank tracking'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1449,7 +1904,11 @@ export const DATA = [
       og_description:
         'Prismic is the headless page builder that lets developers and marketers ship and iterate faster, and build sites that just keep getting better.',
       tags: ['saas', 'web development', 'headless CMS'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1462,7 +1921,11 @@ export const DATA = [
       og_description:
         'Dock is a client-facing workspace that customers love. Dock makes it easy to create sales proposals, onboarding plans, client portals, and project hubs.',
       tags: ['saas', 'B2B', 'sales'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1475,7 +1938,11 @@ export const DATA = [
       og_description:
         'Evervault provides developers with world-class infrastructure to solve complex data security and compliance problems in days, not months.',
       tags: ['development', 'data security', 'compliance'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1487,7 +1954,11 @@ export const DATA = [
       og_description:
         "See a simple consolidated view of all your finances. Never visit your bank's website again.",
       tags: ['finance', 'money management', 'budgeting'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1499,7 +1970,11 @@ export const DATA = [
       og_description:
         'Sketch is the all-in-one platform for digital design — with collaborative design tools, prototyping and developer handoff. Get started for free.',
       tags: ['tool', 'design', 'collaboration'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1512,7 +1987,11 @@ export const DATA = [
       og_description:
         'Butter is an all in one virtual collaboration platform that empowers you to run highly engaging and effective collaborative sessions!',
       tags: ['saas', 'collaboration', 'virtual collaboration'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1525,7 +2004,11 @@ export const DATA = [
       og_description:
         'Get amazing cheap flight deals delivered right to your inbox. We find the lowest prices to the best destinations so you never overpay for flights again.',
       tags: ['travel', 'flight deals', 'cheap flights'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1536,7 +2019,11 @@ export const DATA = [
       og_title: 'Magician for Figma',
       og_description: 'A magical design tool for Figma powered by AI.',
       tags: ['tool', 'design', 'AI'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1548,7 +2035,11 @@ export const DATA = [
       og_description:
         'Nuxt is an open source framework that makes web development intuitive and powerful. Create performant and production-grade full-stack web apps and websites with confidence.',
       tags: ['web development', 'framework', 'Vue'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1559,7 +2050,11 @@ export const DATA = [
       og_title: 'Highnote',
       og_description: "The World's Most Modern Card Platform.",
       tags: ['platform', 'modern card', 'finance'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1572,7 +2067,11 @@ export const DATA = [
       og_description:
         "Discover Slite's AI powered knowledge base for quick access to trusted company info. Simply ask Slite and get the answers you need. Start for free.",
       tags: ['saas', 'AI', 'knowledge base'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1584,7 +2083,11 @@ export const DATA = [
       og_description:
         'Grow on your terms with fast, flexible financing. Our modern capital platform offers embedded capital solutions and working capital for business owners.',
       tags: ['finance', 'capital', 'business'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1596,7 +2099,11 @@ export const DATA = [
       og_description:
         'Groove is the simple yet powerful alternative to Zendesk. The best helpdesk software for your business. Shared inbox, knowledge base, chat and more!',
       tags: ['saas', 'help desk', 'software'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1609,7 +2116,11 @@ export const DATA = [
       og_description:
         'Ready evolves your calendar into a live multiplayer workspace designed for teams to instantly make your meetings better.',
       tags: ['calendar', 'meeting', 'workspace'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1622,20 +2133,28 @@ export const DATA = [
       og_description:
         'Starlight offers everything your company needs to operate in the crypto economy from setting up wallets, to buying crypto, to tracking expenses.',
       tags: ['finance', 'Web3', 'crypto'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
     id: '130',
     metadata: {
-      url: 'https://mode.com/',
+      url: 'https://theme.com/',
       og_image:
         'https://cdn.sanity.io/images/alf6wlua/production/8bb05dc9552d1fa2840b8177ae46f9e5615797e6-1200x630.png?w=1200&h=630&auto=format',
       og_title: 'Modern Business Intelligence | Better data, better decisions',
       og_description:
         'Mode is a collaborative data platform that combines SQL, R, Python, and visual analytics in one place. Connect, analyze, and share, faster.',
       tags: ['data', 'business intelligence', 'analytics'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1648,7 +2167,11 @@ export const DATA = [
       og_description:
         'One Membership, Unlimited Requests. Partner with world-class creatives for a\nflat monthly price. Start your project today, pause or cancel anytime.\n',
       tags: ['membership', 'creatives', 'partnership'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1662,7 +2185,11 @@ export const DATA = [
       og_description:
         'Increase connection and teamwork with our secure, flexible visual work platform. Make it a mural, not a meeting.',
       tags: ['collaboration', 'visual platform', 'work'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1675,7 +2202,11 @@ export const DATA = [
       og_description:
         'Better Stack lets you see inside any stack, debug any issue, and resolve any incident.',
       tags: ['stack', 'debugging', 'incident resolution'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1687,7 +2218,11 @@ export const DATA = [
       og_description:
         'Customer relationship magic: Powerful, flexible and data-driven, Attio makes it easy to build the exact CRM your business needs.',
       tags: ['CRM', 'customer relationship', 'data-driven'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1700,7 +2235,11 @@ export const DATA = [
       og_description:
         "Decipad enables individuals and teams to craft compelling stories with data. It's a document with spreadsheet-like capabilities to bring numbers to life.",
       tags: ['data', 'numbers', 'document'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1713,7 +2252,11 @@ export const DATA = [
       og_description:
         'Passionfroot lets you handle sponsorships, collaboration requests, bookings, and payments â in one single place. Stop feeling overwhelmed by the opportunities. Start seizing them.',
       tags: ['business', 'creators', 'collaboration'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1725,7 +2268,11 @@ export const DATA = [
       og_description:
         'Payload is an open source, headless CMS and application framework built with TypeScript, Node.js, and React.',
       tags: ['CMS', 'Node', 'React'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1736,7 +2283,11 @@ export const DATA = [
       og_title: 'PlanetScale: The world’s most advanced database platform',
       og_description: 'PlanetScale is the most advanced MySQL platform.',
       tags: ['database platform', 'MySQL'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1748,7 +2299,11 @@ export const DATA = [
       og_description:
         'Railway is an infrastructure platform where you can provision infrastructure, develop with that infrastructure locally, and then deploy to the cloud.',
       tags: ['infrastructure', 'platform', 'cloud'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1762,7 +2317,11 @@ export const DATA = [
       og_description:
         'Increase DevOps productivity and improve the way you debug your infrastructure. Try it for free!',
       tags: ['DevOps', 'productivity', 'infrastructure'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1775,7 +2334,11 @@ export const DATA = [
       og_description:
         'Get answers to your urgent questions, using info across your wiki, projects & docs.',
       tags: ['AI', 'Q&A', 'wiki'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1788,7 +2351,11 @@ export const DATA = [
       og_description:
         'Stellar is a hyper-curated creative directory that helps brands discover and hire the best freelancers on earth.',
       tags: ['freelancers', 'creative', 'hire'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1800,7 +2367,11 @@ export const DATA = [
       og_description:
         'Write, schedule, and publish great Twitter tweets & threads. Grow your following on Twitter with analytics and metrics about your account.',
       tags: ['Twitter', 'thread maker', 'analytics'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1812,7 +2383,11 @@ export const DATA = [
       og_description:
         'Meet the all-in-one calendar. Schedule time for todos, events, and contacts with joy. Try it for free!',
       tags: ['productivity', 'calendar', 'joyful'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1825,7 +2400,11 @@ export const DATA = [
       og_description:
         'Sell digital products and SaaS software the easy peasy way with Lemon Squeezy. As your merchant of record, we handle the tax compliance burden so you can focus on more revenue and less headache.',
       tags: ['SaaS', 'payments', 'tax compliance'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1839,7 +2418,11 @@ export const DATA = [
       og_description:
         'Xref HR software automates your people journey. Make better hiring decisions. From candidate reference checks to talent pooling and exit surveys. Learn more.',
       tags: ['saas', 'hr software', 'reference checks'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1852,7 +2435,11 @@ export const DATA = [
       og_description:
         "Frame.io is the world's leading video review and collaboration platform. Share media, collect feedback, manage reviews, and deliver finished work faster — from anywhere in the world.",
       tags: ['saas', 'video review', 'collaboration platform'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1865,7 +2452,11 @@ export const DATA = [
       og_description:
         'The best freelancer tool with a beautiful interface, designed to help you manage your time and priorities.',
       tags: ['tool', 'freelancer', 'time management'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1878,7 +2469,11 @@ export const DATA = [
       og_description:
         'Create interactive user flows and stunning design presentations to engage your audience in synchronous or asynchronous design critique.',
       tags: ['tool', 'design', 'user flow'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1891,7 +2486,11 @@ export const DATA = [
       og_description:
         'Next.js by Vercel is the full-stack React framework for the web.',
       tags: ['framework', 'javascript', 'react'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
 
@@ -1905,7 +2504,11 @@ export const DATA = [
       og_description:
         'Startup is a free bootstrap builder with drag and drop functionality. Build your own design and create templates & themes for your website.',
       tags: ['tool', 'bootstrap', 'builder'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1919,7 +2522,11 @@ export const DATA = [
       og_description:
         'Using our JSON-RPC endpoint, get access to the fastest geo-distributed nodes for Ethereum, BNB chain, and Polygon. Get the fastest and high available blockchain node infrastructure with AI-based predictive autoscaling',
       tags: ['saas', 'blockchain', 'API'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1931,7 +2538,11 @@ export const DATA = [
       og_description:
         'Linear streamlines issues, sprints, and product roadmaps. It’s the new standard for modern software development.',
       tags: ['saas', 'productivity', 'development'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1945,7 +2556,11 @@ export const DATA = [
       og_description:
         'Primer is the world’s first payment orchestration and commerce automation infrastructure. With one low-code integration, you have payments covered—forever.',
       tags: ['saas', 'payments', 'automation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1958,7 +2573,11 @@ export const DATA = [
       og_description:
         'Upgrade to Unsplash+ and start creating with exclusive, royalty-free images.',
       tags: ['saas', 'creative', 'images'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1971,7 +2590,11 @@ export const DATA = [
       og_description:
         "We've built an all-in-one communication platform designed for makers. With Threads, avoid constant interruptions, the pain of keeping up / catching up, and encourage motion over progress as your company scales.",
       tags: ['saas', 'communication', 'productivity'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1984,7 +2607,11 @@ export const DATA = [
       og_description:
         "Secure and scale your product with Stytch's identity platform. From authentication to fraud protection, we have the APIs and SDKs for your use case.",
       tags: ['saas', 'identity', 'developer'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -1997,7 +2624,11 @@ export const DATA = [
       og_description:
         'The must-haves of a chequing account, but with a minimum 4% interest. Earn high interest when you save, and earn rewards when you spend.',
       tags: ['saas', 'finance', 'banking'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2010,7 +2641,11 @@ export const DATA = [
       og_description:
         'Offer phone plans to your users in days, no code or integration required. Launch your own MVNO and issue eSIMs in your own brand',
       tags: ['saas', 'telecom', 'startup'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2023,7 +2658,11 @@ export const DATA = [
       og_description:
         'Dopt gives developers a component library and SDKs to build seamless product onboarding and education experiences in minutes.',
       tags: ['tool', 'onboarding', 'education'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2036,7 +2675,11 @@ export const DATA = [
       og_description:
         'A new kind of home loan. Refinance loans from 5.74% P.A. One low rate, a discount that gets better every year, and no fees from us. Apply online in minutes.',
       tags: ['saas', 'finance', 'banking'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2049,7 +2692,11 @@ export const DATA = [
       og_description:
         'Acorns helps you save & invest. Invest spare change, bank smarter, earn bonus investments, and more! Get started.',
       tags: ['saas', 'finance', 'investment'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2062,7 +2709,11 @@ export const DATA = [
       og_description:
         'Win new customers with the #1 email marketing and automations brand that recommends ways to get more opens, clicks, and sales.',
       tags: ['saas', 'marketing', 'automation'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2075,7 +2726,11 @@ export const DATA = [
       og_description:
         'We make investing in fine wine as effortless as drinking it - combining human expertise, data-driven tech and a love for fine wine. Diversify your portfolio, enrich your life.',
       tags: ['investment', 'wine', 'finance'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2088,7 +2743,11 @@ export const DATA = [
       og_description:
         'Design system built for efficiency and scaling. Atomus is a design system for Figma. Set your typography style guides, color palettes and buttons. Input fields, different states and many more to speed up your delivery process. Indispensable tool for professional digital design studios.',
       tags: ['tool', 'design', 'figma'],
-      filters: [{ name: 'mode', value: 'dark' }],
+      filters: [
+        { name: 'theme', value: 'dark' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2101,7 +2760,11 @@ export const DATA = [
       og_description:
         'Metronome helps software companies launch, iterate, and scale their usage-based business models, with billing infrastructure that works at any size and stage.',
       tags: ['saas', 'billing', 'platform'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2113,7 +2776,11 @@ export const DATA = [
       og_description:
         'Find apartments for rent nearby or in a new city. Choose from thousands of furnished apartments online in minutes. Competitive rates, flexible leases, no deposits or fees.',
       tags: ['saas', 'realestate', 'rental'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2126,7 +2793,11 @@ export const DATA = [
       og_description:
         'Modern Life is an insurance technology company that knows innovation and insurance in equal measure. This is where high tech meets high touch to make your days faster, more confident, and more streamlined than ever before. Sophisticated technology meets life insurance brokerage expertise â bringing the future of insurance to life.',
       tags: ['saas', 'insurance', 'technology'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2138,7 +2809,11 @@ export const DATA = [
       og_description:
         "With Substack, anyone can start a publication that combines a personal website, blog, and email newsletter or podcast. It's quick and simple, so you don't have to be tech savvy. Your audience can pay you directly through subscriptions, with no ads to get in the way. Writers and podcasters can own their intellectual property, keep their mailing list, and start a media business.",
       tags: ['saas', 'publishing', 'media'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2151,7 +2826,11 @@ export const DATA = [
       og_description:
         'The content platform for projects of any size, built around the needs of all team members. Simply put, the most user-friendly and performant  headless CMS.',
       tags: ['saas', 'content', 'CMS'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2176,7 +2855,11 @@ export const DATA = [
       og_description:
         'Access the worldâs largest library of Figma & Webflow components and build better websites in hours, not days.',
       tags: ['saas', 'design', 'webflow'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2190,7 +2873,11 @@ export const DATA = [
       og_description:
         'Settle provides an all-in-one cash flow and financing platform so your CPG e-commerce brand can scale seamlessly.',
       tags: ['saas', 'finance', 'smallbusiness'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2203,7 +2890,11 @@ export const DATA = [
       og_description:
         'Give educators a breakthrough. Our integrated apps assist in every aspect of the school day, from lesson planning to monitoring student progress, streamlining administrative duties, and providing a collaborative platform for education professionals.',
       tags: ['saas', 'education', 'edtech'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2216,7 +2907,11 @@ export const DATA = [
       og_description:
         'PandaDoc streamlines proposals, quotes & other business document workflows - Trusted by 50K+ Clients - SOC 2, HIPAA & GDPR Compliant!',
       tags: ['saas', 'documentmanagement', 'esignature'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2230,7 +2925,11 @@ export const DATA = [
       og_description:
         'Screen candidates faster, find qualified talent, and hire with confidence. Our Skills Assessment library covers 180+ roles and 200+ technical and soft skills.',
       tags: ['saas', 'recruitment', 'skillsassessment'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2243,7 +2942,11 @@ export const DATA = [
       og_description:
         '&Open is redefining business gifting by curating relationships from better gifting experiences. With solutions for employees, customers & more, learn more.',
       tags: ['saas', 'gifting', 'relationshipmanagement'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2256,7 +2959,11 @@ export const DATA = [
       og_description:
         'Let Spendflo buy and renew your SaaS for you. Get more visibility on your vendors, automate procurement and spend less on every tool.',
       tags: ['saas', 'procurement', 'saving'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
   {
@@ -2269,7 +2976,11 @@ export const DATA = [
       og_description:
         'Appraisd helps HR teams and managers align talent performance management with company goals and growth.',
       tags: ['saas', 'HR', 'performancemanagement'],
-      filters: [{ name: 'mode', value: 'light' }],
+      filters: [
+        { name: 'theme', value: 'light' },
+        { name: 'primaryColor', value: '' },
+        { name: 'secondaryColors', value: [''] },
+      ],
     },
   },
 ];

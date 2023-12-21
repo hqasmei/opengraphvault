@@ -34,3 +34,26 @@ export const createUrl = (
 
   return `${pathname}${queryString}`;
 };
+
+export const capitalizeFirstLetter = (value: string) => {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
+export const getUniqueValues = (filterName: string) => {
+  const values = new Set();
+  DATA.forEach((item) => {
+    if (item.metadata.filters) {
+      const filter = item.metadata.filters.find(
+        (filter) => filter.name === filterName,
+      );
+      if (filter) {
+        if (Array.isArray(filter.value)) {
+          filter.value.forEach((v) => values.add(v));
+        } else {
+          values.add(filter.value);
+        }
+      }
+    }
+  });
+  return Array.from(values);
+};

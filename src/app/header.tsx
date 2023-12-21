@@ -5,7 +5,7 @@ import { ModeToggle } from './theme-toggle';
 export async function Header() {
   return (
     <div className="border-b py-4 w-full">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="px-4 md:px-8  mx-auto flex justify-between items-center">
         <Link href="/" className="flex flex-row items-center space-x-2">
           <svg
             width="24"
@@ -35,7 +35,11 @@ export async function Header() {
 
         <div className="flex justify-between gap-8 items-center">
           {/* <Link href="/submit">Submit</Link> */}
-          <Link href="https://plausible.io/opengraphvault.com/" target="_blank" className='hidden md:flex'>
+          <Link
+            href="https://plausible.io/opengraphvault.com/"
+            target="_blank"
+            className="hidden md:flex"
+          >
             Analytics
           </Link>
           <ModeToggle />
