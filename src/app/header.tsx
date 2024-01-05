@@ -35,13 +35,7 @@ export async function Header() {
 
         <div className="flex justify-between gap-8 items-center">
           {/* <Link href="/submit">Submit</Link> */}
-          <Link
-            href="https://plausible.io/opengraphvault.com/"
-            target="_blank"
-            className="hidden md:flex"
-          >
-            Analytics
-          </Link>
+
           <ModeToggle />
         </div>
       </div>
