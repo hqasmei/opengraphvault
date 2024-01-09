@@ -223,8 +223,8 @@ export default function Grid() {
 
               {openAccordions['themesAccordion'] && (
                 <div className="mt-4 flex flex-wrap space-x-2">
-                  <button className="p-2 border rounded-lg">Light</button>
-                  <button className="p-2 border rounded-lg">Dark</button>
+                  <button className="p-2 border rounded-lg"  onClick={() => handleThemeChange('light')}>Light</button>
+                  <button className="p-2 border rounded-lg"  onClick={() => handleThemeChange('dark')}>Dark</button>
                 </div>
               )}
             </div>
