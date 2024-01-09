@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from 'react';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 export default function Modal({
   children,
@@ -41,7 +41,6 @@ export default function Modal({
 
   return (
     <Dialog
-      
       open={setShowModal ? showModal : true}
       onOpenChange={(open) => {
         if (!open) {

@@ -320,23 +320,6 @@ export const DATA = [
       ],
     },
   },
-  {
-    id: '20',
-    metadata: {
-      url: 'https://acuityscheduling.com/',
-      og_image:
-        'https://cdn-marketing.acuityscheduling.com/img/brand/logo-og.png',
-      og_title: 'Online Appointment Scheduling Software - Acuity Scheduling',
-      og_description:
-        'Acuity Scheduling is customizable appointment scheduling software made easy, automating your workflows, payments, and bookings. Start a free trial today!',
-      tags: ['appointment scheduling', 'software', 'scheduling'],
-      filters: [
-        { name: 'theme', value: 'light' },
-        { name: 'primaryColor', value: 'blue' },
-        { name: 'secondaryColors', value: ['white'] },
-      ],
-    },
-  },
 
   {
     id: '21',
@@ -591,23 +574,6 @@ export const DATA = [
     },
   },
   {
-    id: '36',
-    metadata: {
-      url: 'https://www.titan.com/',
-      og_image:
-        'https://cdn.titanvest.com/images/meta-tags/titan-smart-cash.png',
-      og_title: 'Titan — Earn Up To 5.34%* On Your Cash.',
-      og_description:
-        'Cash management, investing, and retirement planning. Outsmart taxes with Smart Cash—it automatically moves your money to your highest after-tax rate on Titan.',
-      tags: ['cash management', 'investing', 'retirement planning'],
-      filters: [
-        { name: 'theme', value: 'light' },
-        { name: 'primaryColor', value: 'white' },
-        { name: 'secondaryColors', value: ['gray'] },
-      ],
-    },
-  },
-  {
     id: '37',
     metadata: {
       url: 'https://observiq.com/',
@@ -759,24 +725,7 @@ export const DATA = [
         { name: 'secondaryColors', value: ['white'] },
       ],
     },
-  },
-  {
-    id: '46',
-    metadata: {
-      url: 'https://www.rainforestpay.com/',
-      og_image:
-        'https://rainforestpay.wpengine.com/wp-content/uploads/2023/03/1.png',
-      og_title: 'Rainforest | Payments processing for software companies',
-      og_description:
-        'Embed payments into your product or platform with Rainforest’s configurable, low-code components. Accept and send payments, minimize risk and compliance headaches, and grow revenue.',
-      tags: ['payments processing', 'software companies', 'risk management'],
-      filters: [
-        { name: 'theme', value: 'light' },
-        { name: 'primaryColor', value: 'white' },
-        { name: 'secondaryColors', value: ['green'] },
-      ],
-    },
-  },
+  }, 
   {
     id: '47',
     metadata: {
@@ -1064,23 +1013,7 @@ export const DATA = [
         { name: 'secondaryColors', value: ['black'] },
       ],
     },
-  },
-  {
-    id: '64',
-    metadata: {
-      url: 'https://grabee.com/',
-      og_image: 'https://grabee.com/grabee-og.jpg',
-      og_title: 'Grabee: Product & Customer Feedback Management Tool',
-      og_description:
-        'Grabee is a customer feedback management tool which helps you collect, manage and prioritize customer feedback from different sources and platforms.',
-      tags: ['saas', 'customer feedback', 'feedback management'],
-      filters: [
-        { name: 'theme', value: 'dark' },
-        { name: 'primaryColor', value: 'purple' },
-        { name: 'secondaryColors', value: ['white', 'yellow', 'pink'] },
-      ],
-    },
-  },
+  }, 
   {
     id: '65',
     metadata: {
@@ -1364,23 +1297,7 @@ export const DATA = [
         { name: 'secondaryColors', value: ['white', 'green'] },
       ],
     },
-  },
-  {
-    id: '83',
-    metadata: {
-      url: 'https://perawallet.app/',
-      og_image: 'https://perawallet.s3.amazonaws.com/images/pera-header.png',
-      og_title: 'Pera Algo Wallet – Simply the best Algorand wallet.',
-      og_description:
-        'Secure. Open Source. Community Driven. Simply the best Algorand wallet.',
-      tags: ['saas', 'wallet', 'Algorand'],
-      filters: [
-        { name: 'theme', value: 'light' },
-        { name: 'primaryColor', value: 'white' },
-        { name: 'secondaryColors', value: ['yellow'] },
-      ],
-    },
-  },
+  }, 
   {
     id: '84',
     metadata: {
@@ -1705,24 +1622,7 @@ export const DATA = [
         { name: 'secondaryColors', value: ['white', 'green'] },
       ],
     },
-  },
-  {
-    id: '103',
-    metadata: {
-      url: 'https://postlander.com/',
-      og_image:
-        'https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Feb9bbc6af0898a0b24579c9071b5975b.cdn.bubble.io%2Ff1683822999135x602803817187166000%2Fpostlander-computer.jpg?w=&h=&auto=compress&dpr=1&fit=max',
-      og_title: 'Postlander | AI Cover Letters, Resume Checker, and More',
-      og_description:
-        'AI cover letter generator, ATS resume keyword optimizer, resume design templates, and more. Powered by GPT.',
-      tags: ['saas', 'AI', 'resume optimization'],
-      filters: [
-        { name: 'theme', value: 'light' },
-        { name: 'primaryColor', value: 'white' },
-        { name: 'secondaryColors', value: ['white'] },
-      ],
-    },
-  },
+  }, 
   {
     id: '104',
     metadata: {
@@ -2352,24 +2252,7 @@ export const DATA = [
         { name: 'secondaryColors', value: ['black'] },
       ],
     },
-  },
-  {
-    id: '142',
-    metadata: {
-      url: 'https://www.stellar.work/',
-      og_image:
-        'https://assets-global.website-files.com/62e845231c7bf476803995ba/640b90a8260a9fad0641f3a6_Stellar%20Creative%20Directory.jpg',
-      og_title: 'Stellar â Hire Top Creative Freelancers',
-      og_description:
-        'Stellar is a hyper-curated creative directory that helps brands discover and hire the best freelancers on earth.',
-      tags: ['freelancers', 'creative', 'hire'],
-      filters: [
-        { name: 'theme', value: 'dark' },
-        { name: 'primaryColor', value: 'purple' },
-        { name: 'secondaryColors', value: ['purple'] },
-      ],
-    },
-  },
+  }, 
   {
     id: '143',
     metadata: {
@@ -2810,24 +2693,7 @@ export const DATA = [
         { name: 'secondaryColors', value: ['green', 'yellow'] },
       ],
     },
-  },
-  {
-    id: '171',
-    metadata: {
-      url: 'https://www.datocms.com/',
-      og_image:
-        'https://www.datocms-assets.com/205/1629900569-logo.png?auto=format&fit=max&w=1200',
-      og_title: 'The headless CMS that your team will love',
-      og_description:
-        'The content platform for projects of any size, built around the needs of all team members. Simply put, the most user-friendly and performant  headless CMS.',
-      tags: ['saas', 'content', 'CMS'],
-      filters: [
-        { name: 'theme', value: 'light' },
-        { name: 'primaryColor', value: 'white' },
-        { name: 'secondaryColors', value: ['orange'] },
-      ],
-    },
-  },
+  }, 
   {
     id: '172',
     metadata: {

@@ -11,6 +11,7 @@ import ModalContent from '@/components/modal-content';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import useMediaQuery from '@/hooks/use-media-query';
 import {
   capitalizeFirstLetter,
   createUrl,
@@ -19,9 +20,14 @@ import {
 } from '@/lib/utils';
 import withTheme from '@/theme';
 import { Drawer, Select, Space } from 'antd';
-import { ListFilter, SearchX } from 'lucide-react';
+import { ArrowLeftToLine, ChevronUp, ListFilter, SearchX } from 'lucide-react';
 
 import { DATA } from '../consts';
+import { Separator } from './ui/separator';
+
+type AccordionStates = {
+  [key: string]: boolean;
+};
 
 export default function Grid() {
   const pathname = usePathname();
@@ -29,6 +35,10 @@ export default function Grid() {
   const searchParams = useSearchParams();
 
   const [open, setOpen] = useState(false);
+  const [openAccordions, setOpenAccordions] = useState<AccordionStates>({
+    themesAccordion: true,
+  });
+
   const [theme, setTheme] = useState(searchParams.get('theme'));
   const [primaryColor, setPrimaryColor] = useState(
     searchParams.get('primaryColor'),
@@ -37,6 +47,15 @@ export default function Grid() {
   // const tags = getAllUniqueTags();
 
   // console.log(tags);
+
+  const { isMobile } = useMediaQuery();
+
+  const toggleAccordion = (accordionKey: string) => {
+    setOpenAccordions((prevState) => ({
+      ...prevState,
+      [accordionKey]: !prevState[accordionKey],
+    }));
+  };
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -65,14 +84,6 @@ export default function Grid() {
     const queryString = queryParams.join('&');
     router.push(pathname + `?` + queryString);
     setSecondaryColors(values);
-  };
-
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
   };
 
   const filteredData = DATA.filter((item) => {
@@ -115,169 +126,263 @@ export default function Grid() {
   });
 
   return (
-    <div className=" flex  flex-col space-y-4 md:space-y-6 items-start">
-      <div className="hidden md:flex flex-row space-x-4">
-        <div className="flex flex-col space-y-1">
-          <span className="font-medium text-sm">Themes</span>
-          {withTheme(
-            <Space wrap>
-              <Select
-                style={{ width: 160 }}
-                defaultValue={theme === null ? 'all' : theme}
-                onChange={(value) => handleThemeChange(value)}
-                options={[
-                  { value: 'all', label: 'All' },
-                  { value: 'light', label: 'Light' },
-                  { value: 'dark', label: 'Dark' },
-                ]}
-              />
-            </Space>,
-          )}
-        </div>
-        <div className="flex flex-col space-y-1">
-          <span className="font-medium text-sm  ">Primary color</span>
-          {withTheme(
-            <Space wrap>
-              <Select
-                style={{ width: 160 }}
-                onChange={(value) => handlePrimaryColorChange(value)}
-                placeholder="Primary color"
-                defaultValue={primaryColor === null ? 'all' : primaryColor}
-                options={[
-                  { value: 'all', label: 'All' },
-                  ...(getUniqueValues('primaryColor') as string[]).map(
-                    (color) => ({
-                      value: color,
-                      label: capitalizeFirstLetter(color),
-                    }),
-                  ),
-                ]}
-              />
-            </Space>,
-          )}
-        </div>
-        <div className="flex flex-col space-y-1">
-          <span className="font-medium text-sm ">Secondary colors</span>
-          {withTheme(
-            <Space direction="horizontal">
-              <Select
-                mode="multiple"
-                allowClear
-                style={{ width: 250, height: '100%' }}
-                placeholder="Secondary colors"
-                onChange={(values) => handlSecondaryColorsChange(values)}
-                options={[
-                  ...(getUniqueValues('secondaryColors') as string[]).map(
-                    (color) => ({
-                      value: color,
-                      label: capitalizeFirstLetter(color),
-                    }),
-                  ),
-                ]}
-              />
-            </Space>,
-          )}
-        </div>
-      </div>
-      <div className="flex w-full justify-start  md:hidden">
+    <div className="relative w-full h-screen">
+      {!open && (
         <>
-          <Space>
-            <Button
-              variant="ghost"
-              onClick={showDrawer}
-              className="flex flex-row space-x-2 items-center justify-center w-full"
-            >
-              <span className="text-lg">Filter</span>
-              <ListFilter />
-            </Button>
-          </Space>
-          <Drawer
-            title="Filters"
-            placement="right"
-            width={500}
-            onClose={onClose}
-            open={open}
-            extra={
-              <Space>
-                <Button onClick={onClose}>Close</Button>
-                <Button variant="secondary" onClick={onClose}>
-                  OK
-                </Button>
-              </Space>
-            }
-          >
-            <div className="flex flex-col space-y-4">
-              <div className="flex flex-col space-y-1">
-                <span className="font-medium text-sm text-black">Themes</span>
-                {withTheme(
-                  <Space wrap>
-                    <Select
-                      style={{ width: 160 }}
-                      defaultValue={theme === null ? 'all' : theme}
-                      onChange={(value) => handleThemeChange(value)}
-                      options={[
-                        { value: 'all', label: 'All' },
-                        { value: 'light', label: 'Light' },
-                        { value: 'dark', label: 'Dark' },
-                      ]}
+          <div className="flex flex-col space-y-4 md:space-y-6 items-start w-full">
+            <div className="flex w-full justify-start border-b items-center  h-16  px-4 md:px-8">
+              <button
+                onClick={() => {
+                  setOpen(true);
+                }}
+                className="flex flex-row space-x-2 w-full md:px-3 md:w-auto rounded-lg border items-center justify-center p-1 hover:bg-secondary duration-200 cursor-pointer"
+              >
+                <ListFilter size={18} />
+                <span>Filter</span>
+              </button>
+            </div>
+          </div>
+          <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-24 px-4 md:px-8 mt-8">
+            {filteredData.map((item, idx) => {
+              return (
+                <div key={idx} className="flex flex-col space-y-2">
+                  <Link
+                    href={`?ogImageId=${item.id}`}
+                    scroll={false}
+                    className="relative group w-full rounded-md border overflow-clip"
+                  >
+                    <img
+                      className="w-full h-full object-cover object-top rounded-md cursor-pointer shadow-sm transition duration-300 hover:scale-105"
+                      src={item.metadata.og_image}
+                      alt={item.metadata.og_title}
+                      loading="lazy"
                     />
-                  </Space>,
-                )}
+                  </Link>
+                  <div className="flex flex-row space-x-1">
+                    {item?.metadata.tags &&
+                      item?.metadata.tags.map((tag, idx) => {
+                        return (
+                          <Badge key={idx} className="" variant="secondary">
+                            {tag}
+                          </Badge>
+                        );
+                      })}
+                  </div>
+                  <span className="line-clamp-1 font-semibold">
+                    {item.metadata.og_title}
+                  </span>
+                </div>
+              );
+            })}
+
+            {!!searchParams.get('ogImageId') && (
+              <Modal>
+                <ModalContent id={searchParams.get('ogImageId') || ''} />
+              </Modal>
+            )}
+          </div>
+        </>
+      )}
+      {open && isMobile && (
+        <>
+          <div className="absolute top-0 right-0 bottom-0 left-0 bg-opacity-70 bg-neutral-800 z-10"></div>
+          <div className="w-[256px] top-0 bottom-0 absolute h-full bg-background border-r z-10">
+            <div className="flex flex-row justify-between items-center p-4">
+              <div className="flex flex-row space-x-2 items-center">
+                <ListFilter size={18} />
+                <span>Filter</span>
               </div>
-              <div className="flex flex-col space-y-1">
-                <span className="font-medium text-sm text-black">
-                  Primary color
-                </span>
-                {withTheme(
-                  <Space wrap>
-                    <Select
-                      style={{ width: 160 }}
-                      onChange={(value) => handlePrimaryColorChange(value)}
-                      placeholder="Primary color"
-                      defaultValue={
-                        primaryColor === null ? 'all' : primaryColor
-                      }
-                      options={[
-                        { value: 'all', label: 'All' },
-                        ...(getUniqueValues('primaryColor') as string[]).map(
-                          (color) => ({
-                            value: color,
-                            label: capitalizeFirstLetter(color),
-                          }),
-                        ),
-                      ]}
-                    />
-                  </Space>,
-                )}
+              <button
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <ArrowLeftToLine
+                  size={18}
+                  className="text-primary/80 hover:text-primary duration-200"
+                />
+              </button>
+            </div>
+
+            <Separator />
+
+            <div className="m-4 pb-4 border-b border-dotted flex flex-col">
+              <div className="flex flex-row justify-between items-center">
+                <span>Themes</span>
+                <button onClick={() => toggleAccordion('themesAccordion')}>
+                  <ChevronUp
+                    size={14}
+                    className={
+                      openAccordions['themesAccordion']
+                        ? 'rotate-0 duration-500'
+                        : 'rotate-180 duration-500'
+                    }
+                  />
+                </button>
               </div>
-              <div className="flex flex-col space-y-1">
-                <span className="font-medium text-sm text-black">
-                  Secondary colors
-                </span>
-                {withTheme(
-                  <Space direction="vertical">
-                    <Select
-                      mode="multiple"
-                      allowClear
-                      style={{ width: 160, height: '100%' }}
-                      placeholder="Secondary colors"
-                      onChange={(values) => handlSecondaryColorsChange(values)}
-                      options={[
-                        ...(getUniqueValues('secondaryColors') as string[]).map(
-                          (color) => ({
-                            value: color,
-                            label: capitalizeFirstLetter(color),
-                          }),
-                        ),
-                      ]}
+
+              {openAccordions['themesAccordion'] && (
+                <div className="mt-4 flex flex-wrap space-x-2">
+                  <button className="p-2 border rounded-lg">Light</button>
+                  <button className="p-2 border rounded-lg">Dark</button>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-24 px-4 md:px-8 mt-8">
+            {filteredData.map((item, idx) => {
+              return (
+                <div key={idx} className="flex flex-col space-y-2">
+                  <Link
+                    href={`?ogImageId=${item.id}`}
+                    scroll={false}
+                    className="relative group w-full rounded-md border overflow-clip"
+                  >
+                    <img
+                      className="w-full h-full object-cover object-top rounded-md cursor-pointer shadow-sm transition duration-300 hover:scale-105"
+                      src={item.metadata.og_image}
+                      alt={item.metadata.og_title}
+                      loading="lazy"
                     />
-                  </Space>,
-                )}
+                  </Link>
+                  <div className="flex flex-row space-x-1">
+                    {item?.metadata.tags &&
+                      item?.metadata.tags.map((tag, idx) => {
+                        return (
+                          <Badge key={idx} className="" variant="secondary">
+                            {tag}
+                          </Badge>
+                        );
+                      })}
+                  </div>
+                  <span className="line-clamp-1 font-semibold">
+                    {item.metadata.og_title}
+                  </span>
+                </div>
+              );
+            })}
+
+            {!!searchParams.get('ogImageId') && (
+              <Modal>
+                <ModalContent id={searchParams.get('ogImageId') || ''} />
+              </Modal>
+            )}
+          </div>
+        </>
+      )}
+
+      {open && !isMobile && (
+        <>
+          <div className="absolute w-[256px] bg-background flex-1">
+            <div className="flex flex-row justify-between items-center h-[63px] px-4">
+              <div className="flex flex-row space-x-2 items-center">
+                <ListFilter size={18} />
+                <span>Filter</span>
+              </div>
+              <button
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <ArrowLeftToLine
+                  size={18}
+                  className="text-primary/80 hover:text-primary duration-200"
+                />
+              </button>
+            </div>
+
+            <Separator />
+
+            <div className="m-4 pb-4 border-b border-dotted flex flex-col">
+              <div className="flex flex-row justify-between items-center">
+                <span>Themes</span>
+                <button onClick={() => toggleAccordion('themesAccordion')}>
+                  <ChevronUp
+                    size={14}
+                    className={
+                      openAccordions['themesAccordion']
+                        ? 'rotate-0 duration-500'
+                        : 'rotate-180 duration-500'
+                    }
+                  />
+                </button>
+              </div>
+
+              {openAccordions['themesAccordion'] && (
+                <div className="mt-4 flex flex-wrap space-x-2">
+                  <button
+                    className="p-2 border rounded-lg"
+                    onClick={() => handleThemeChange('light')}
+                  >
+                    Light
+                  </button>
+                  <button
+                    className="p-2 border rounded-lg"
+                    onClick={() => handleThemeChange('dark')}
+                  >
+                    Dark
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="flex flex-grow flex-col border-l  ml-[256px]">
+            <div className="flex flex-col space-y-4 md:space-y-6 items-start w-full">
+              <div className="flex w-full justify-start border-b h-16 px-4 md:px-8 items-center">
+                <button
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                  className="hidden flex-row space-x-2 w-full md:px-3 md:w-auto rounded-lg border items-center justify-center p-1 hover:bg-secondary duration-200 cursor-pointer"
+                >
+                  <ListFilter size={18} />
+                  <span>Filter</span>
+                </button>
+                {/* <Separator  orientation="vertical" className='ml-6 h-10'/> */}
               </div>
             </div>
-          </Drawer>
+            <div className="text-white grid grid-cols-1 sm:grid-cols-2 gap-6 pb-24 px-4 md:px-8 mt-8">
+              {filteredData.map((item, idx) => {
+                return (
+                  <div key={idx} className="flex flex-col space-y-2">
+                    <Link
+                      href={`?ogImageId=${item.id}`}
+                      scroll={false}
+                      className="relative group w-full rounded-md border overflow-clip"
+                    >
+                      <img
+                        className="w-full h-full object-cover object-top rounded-md cursor-pointer shadow-sm transition duration-300 hover:scale-105"
+                        src={item.metadata.og_image}
+                        alt={item.metadata.og_title}
+                        loading="lazy"
+                      />
+                    </Link>
+                    <div className="flex flex-row space-x-1">
+                      {item?.metadata.tags &&
+                        item?.metadata.tags.map((tag, idx) => {
+                          return (
+                            <Badge key={idx} className="" variant="secondary">
+                              {tag}
+                            </Badge>
+                          );
+                        })}
+                    </div>
+                    <span className="line-clamp-1 font-semibold">
+                      {item.metadata.og_title}
+                    </span>
+                  </div>
+                );
+              })}
+
+              {!!searchParams.get('ogImageId') && (
+                <Modal>
+                  <ModalContent id={searchParams.get('ogImageId') || ''} />
+                </Modal>
+              )}
+            </div>
+          </div>
         </>
-      </div>
+      )}
 
       {filteredData.length === 0 && (
         <div className="w-full items-center justify-center flex-1 flex py-20 flex-col space-y-4">
@@ -290,31 +395,6 @@ export default function Grid() {
           </div>
         </div>
       )}
-      <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-24">
-        {filteredData.map((item, idx) => {
-          return (
-            <Link
-              key={idx}
-              href={`?ogImageId=${item.id}`}
-              scroll={false}
-              className="relative group w-full rounded-md border overflow-clip"
-            >
-              <img
-                className="w-full h-full object-cover object-top rounded-md cursor-pointer shadow-sm transition duration-300 hover:scale-105"
-                src={item.metadata.og_image}
-                alt={item.metadata.og_title}
-                loading="lazy"
-              />
-            </Link>
-          );
-        })}
-
-        {!!searchParams.get('ogImageId') && (
-          <Modal>
-            <ModalContent id={searchParams.get('ogImageId') || ''} />
-          </Modal>
-        )}
-      </div>
     </div>
   );
 }

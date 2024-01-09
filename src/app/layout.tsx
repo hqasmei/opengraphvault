@@ -47,14 +47,12 @@ export default function RootLayout({
       </head>
       <body className={GeistSans.className}>
         <main className="min-h-screen flex flex-col items-center">
-          <div className="flex-1 w-full flex flex-col gap-12 items-center">
-            <ContextProvider>
-              <Header />
-              {children}
-              <Analytics />
-              <SpeedInsights />
-            </ContextProvider>
-          </div>
+          <ContextProvider>
+            <Header />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </ContextProvider>
         </main>
       </body>
     </html>
